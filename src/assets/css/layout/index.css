@@ -1,0 +1,148 @@
+
+		.pxl-animated {
+			animation-duration: var(--pxl-animation-duration, 1.25s);
+		}
+		.pxl-border-animated.pxl-animated .pxl-border-anm {
+			transform: scale(1)!important;
+		}
+		.pxl-border-animated .pxl-border-anm.bt {
+			top: 0;
+			left: 0;
+			transform: scaleX(0);
+			transform-origin: 0 0;
+		}
+		.pxl-border-anm.bw-yes {
+			border-width: var(--bd-width);
+		}
+		.pxl-border-animated .pxl-border-anm {
+			position: absolute;
+			transition: transform 1.5s cubic-bezier(.77,0,.175,1);
+		}
+		.pxl-border-animated .pxl-border-anm.br {
+			top: 0;
+			right: 0;
+			transform: scaleY(0);
+			transform-origin: 100% 0;
+		}
+		.pxl-border-animated .pxl-border-anm.bb {
+			left: 0;
+			bottom: 0;
+			transform: scaleX(0);
+			transform-origin: 0 100%;
+		}
+		.pxl-border-animated .pxl-border-anm.bl {
+			top: 0;
+			left: 0;
+			transform: scaleY(0);
+			transform-origin: 0 0;
+		}
+
+
+
+
+.text-char {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 200px / 2);
+    height: calc(200px / 2);
+    width: 200px;
+    font-weight: 400;
+    font-size: 18px;
+    transform-origin: bottom center;
+    transform: rotate(var(--char-rotate));
+    color: var(--color-white);
+    padding-top: 8px;
+  }
+
+.dark .text-char {
+    color: var(--color-white);
+  }
+.light .text-char {
+    color: var(--color-black);
+  }
+
+.word {
+  display: inline-block;
+  margin: 0 6px;
+}
+.letter {
+  opacity: 0.1;
+  display: inline-block;
+}
+
+.space {
+  display: inline-block;
+  width: 1.5rem;
+}
+.dark .pxl-heading-scroll-effect {
+  --heading-color-1: rgba(255, 255, 255, 0.2);
+}
+.light .pxl-heading-scroll-effect {
+  --heading-color-1: rgba(0, 0, 0, 0.2);
+}
+.pxl-heading-scroll-effect .heading-text div {
+  background-clip: text;
+  color: transparent;
+  background: linear-gradient(to right, var(--pxl-heading) 50%, var(--heading-color-1) 50%) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.75s;
+}
+.dark .pxl-heading-scroll-effect .heading-text div {
+  --pxl-heading: white;
+}
+.light .pxl-heading-scroll-effect .heading-text div {
+  --pxl-heading: black;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+.gl-star-rating--stars span {
+  --gl-star-size: 20px;
+}
+#videoContainer iframe {
+  @apply max-md:h-400;
+}
+
+/* svg.progressbar {
+		@apply h-auto max-w-[200px] p-[1em] rotate-[-90deg] w-full;
+	}
+	@media only screen and (max-width: 767px) {
+	svg.progressbar {
+		@apply max-w-[500px] ;
+	}
+	}
+	svg.progressbar:nth-of-type(6n+1) circle {
+		@apply stroke-primary;
+	}
+	svg.progressbar circle.incomplete {
+		@apply opacity-[0.25];
+	}
+	svg.progressbar circle.complete {
+		@apply [stroke-dasharray:219.91148575129] [stroke-dashoffset:200px] ;
+	}
+	svg.progressbar circle {
+		@apply [fill:rgba(0,0,0,0)] [stroke-width:10];
+	}
+	svg.progressbar text {
+		@apply [fill:#000] [text-anchor:middle] text-[1em] font-normal;
+	}
+	.swiper-img-space .swiper-slide img{
+		@apply py-20;
+	} */
+	.circle {
+		@apply size-150 mx-auto mt-10 inline-block text-center relative z-1;
+	}
+	.progressbar .circle  canvas{
+		@apply rotate-[-30deg];
+	}

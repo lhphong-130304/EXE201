@@ -1,0 +1,8 @@
+.clip-right-animation {
+    animation-name: clipRightIn;
+    animation-timing-function: cubic-bezier(0,0.57,0.55,1);
+}
+.clip-left-animation {
+    animation-name: clipLeftIn;
+    animation-timing-function: cubic-bezier(0,0.57,0.55,1);
+}

@@ -1,0 +1,145 @@
+@layer components {
+    .btn {
+        display: inline-flex;
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-medium);
+        border-radius: calc(infinity * 0px);
+        line-height: var(--leading-normal);
+        padding: --spacing(12) --spacing(20);
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        transition-duration: 0s !important;
+      }
+      .btn-sm {
+        padding: --spacing(5.5) --spacing(15);
+        font-size: var(--text-2xs);
+      }
+      .btn-icon {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        justify-content: center;
+      }
+    .btn-primary {
+        color: var(--color-secondary);
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+    }
+    .btn-black {
+        color: var(--color-white);
+        background-color: var(--color-dark)
+    }
+    .dark .btn-black {
+        background-color: var(--color-black)
+    }
+    .btn-light {
+        color: var(--color-dark);
+        background-color: var(--color-light)
+    }
+    .btn-outline {
+        color: var(--color-secondary);
+        background-color: transparent;
+        border: 1px solid #0000001a;
+    }
+    .btn-outline.light {
+      @apply border-2 dark:border-white border-black dark:text-white text-black;
+    }
+    .btn-outline.light:hover {
+      @apply border-2 border-primary;
+    }
+    .dark .btn-outline.primary {
+        color: var(--color-white);
+        background-color: transparent;
+        border: 1px solid #ffffff1a;
+    }
+    .light .btn-outline.primary {
+        color: var(--color-black);
+        background-color: transparent;
+        border: 1px solid #0000001a;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .btn {
+        font-size: var(--text-lg);
+    }
+}
+@media screen and (max-width: 567px) {
+    .btn {
+        font-size: var(--text-base);
+    }
+}
+  @keyframes anglerotate {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .btn-overlay:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(110 255 110 / 50%);
+  }
+  .btn-overlay svg {    
+    transition-duration: 0.5s;
+  }
+  .btn-overlay:hover svg {    
+    transform: rotate(45deg);
+  }
+
+  .btn-hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--heading-color);
+    transform-origin: bottom left;
+    -webkit-transition: all 250ms linear 0s;
+    -khtml-transition: all 250ms linear 0s;
+    -moz-transition: all 250ms linear 0s;
+    -ms-transition: all 250ms linear 0s;
+    -o-transition: all 250ms linear 0s;
+    transition: all 250ms linear 0s;
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    z-index: 0;
+  }
+  .btn-outline.btn-hover::before {
+    background-color: #191B1D;
+  }
+  .btn-outline.primary.btn-hover::before {
+    background-color: #E3FF75;
+  }
+  .btn.btn-hover:hover::before {
+    -webkit-transform: scale(1);
+    -khtml-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+  .btn.btn-hover:hover .pxl-button-text {
+    @apply text-white;
+}
+  .btn.primary.btn-hover:hover .pxl-button-text {
+    @apply text-secondary;
+}
+  .btn.btn-hover:hover svg path {
+    @apply stroke-primary;
+}
+  .btn.primary.btn-hover:hover svg path {
+    @apply stroke-black;
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <!-- PAGE TITLE HERE -->
+    <title>Tìm Phòng Gym | GYMFINDER</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DexignZone">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICONS ICON -->
+    <link rel="stylesheet" href="assets/vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-number-btn,
+        .page-nav-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            background: white;
+            color: black;
+        }
+
+        .dark .page-number-btn,
+        .dark .page-nav-btn {
+            background: #1a1a1a;
+            border-color: rgba(255, 255, 255, 0.05);
+            color: white;
+        }
+
+        .page-number-btn.active {
+            background: var(--primary-color, #d4ff00);
+            color: black;
+            border-color: var(--primary-color, #d4ff00);
+        }
+
+        .page-number-btn:hover:not(.active),
+        .page-nav-btn:hover:not(:disabled) {
+            background: var(--primary-color, #d4ff00);
+            color: black;
+            border-color: var(--primary-color, #d4ff00);
+            transform: translateY(-2px);
+        }
+
+        #pagination-container {
+            clear: both;
+            z-index: 10;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <style>
+        .gym-card:hover .gym-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-white">
+
+    <div id="loading-area" class="pxl-loader style-2">
+        <div class="loading-spinner">
+            <div class="loading-dot1"></div>
+            <div class="loading-dot2"></div>
+        </div>
+    </div>
+
+    <div class="page-wraper">
+        <!-- Header -->
+        <header class="absolute top-0 left-0 w-full z-9999 site-header">
+            <div class="main-bar-wraper">
+                <div class="container-fluid">
+                    <div class="flex items-center 2xl:gap-40 gap-20 sm:py-40 py-20">
+                        <div class="logo xl:me-20">
+                            <a href="index.html">
+                                <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                            </a>
+                        </div>
+                        <div class="w-1 h-50 dark:bg-white/20 bg-black/20 xl:block hidden"></div>
+                        <div class="header-nav navbar-collapse full-sidenav grow custom-scroll">
+                            <ul class="nav navbar xl:flex xl:w-auto w-full">
+                                <li><a href="index.html"><span>Trang chủ</span></a></li>
+                                <li><a href="team.html"><span>Đội ngũ</span></a></li>
+                                <li><a href="shop-standard.html"><span>Cửa hàng</span></a></li>
+                                <li class="active"><a href="gym-finder.html"><span>Tìm phòng tập</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="flex xl:gap-20 gap-10">
+                            <button type="button"
+                                class="size-48 cursor-pointer inline-flex items-center justify-center dark:bg-[#2C2E30] bg-[#F1F1F1] theme-btn">
+                                <span class="dark-theme dark:block hidden">
+                                    <i class="las la-sun text-2xl text-white"></i>
+                                </span>
+                                <span class="light-theme dark:hidden block">
+                                    <i class="las la-moon text-2xl text-black"></i>
+                                </span>
+                            </button>
+                            <div id="auth-buttons-desktop" class="flex items-center xl:gap-20 gap-10">
+                                <a href="login.html" id="login-btn" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Đăng nhập</span>
+                                </a>
+                                <div id="user-info" class="hidden items-center gap-10 max-xl:hidden">
+                                    <a href="user-dashboard.html" id="user-name-link"
+                                        class="dark:text-white text-black text-sm hover:text-primary transition-all">
+                                        <span id="user-display-name">User</span>
+                                    </a>
+                                    <a href="javascript:void(0)" id="logout-btn"
+                                        class="btn btn-primary max-xl:hidden group">
+                                        <span class="pxl-button-text">Đăng xuất</span>
+                                    </a>
+                                </div>
+                                <a href="shop-cart.html" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Giỏ hàng</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main class="page-content">
+                    <!-- Banner -->
+                    <div
+                        class="dark:bg-bodybg z-1 relative after:content-[''] after:absolute after:top-0 after:left-0 after:size-full after:bg-no-repeat after:pointer-events-none after:-z-1 after:bg-center after:bg-[url('../images/background/bg2.png')] dark:after:mix-blend-color-burn">
+                        <div class="container table">
+                            <div class="h-210 align-middle table-cell pt-130 md:pb-130 pb-100 align-center text-center">
+                                <h1 class="md:text-7xl sm:text-6xl text-[48px]/65">Tìm Phòng Gym</h1>
+                                <p class="text-lg opacity-60 mt-4">Khám phá không gian tập luyện lý tưởng quanh bạn</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="content-inner-1">
+                        <div class="container">
+                            <!-- Search Bar -->
+                            <div class="max-w-5xl mx-auto mb-12">
+                                <div
+                                    class="flex flex-col md:flex-row gap-4 bg-white dark:bg-dark p-6 rounded-3xl shadow-2xl border border-black/5 dark:border-white/5 items-stretch">
+                                    <div class="flex-[3] relative group">
+                                        <i
+                                            class="las la-search absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 text-2xl group-focus-within:text-primary duration-300 z-10"></i>
+                                        <input type="text" id="gym-search-input"
+                                            placeholder="Tên phòng tập hoặc địa chỉ..."
+                                            style="padding-left: 64px !important;"
+                                            class="w-full pr-6 py-5 bg-light dark:bg-[#1f2122] border border-transparent focus:border-primary/30 rounded-2xl focus:ring-0 dark:text-white outline-none duration-300 text-lg">
+                                    </div>
+                                    <div class="flex-1 relative group md:min-w-[200px]">
+                                        <i
+                                            class="las la-star absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 text-2xl group-focus-within:text-primary duration-300 z-10"></i>
+                                        <select id="gym-rating-filter" style="padding-left: 64px !important;"
+                                            class="w-full pr-10 py-5 bg-light dark:bg-[#1f2122] border border-transparent focus:border-primary/30 rounded-2xl focus:ring-0 dark:text-white outline-none appearance-none cursor-pointer duration-300 text-lg">
+                                            <option value="0">Tất cả</option>
+                                            <option value="4">4+ Sao</option>
+                                            <option value="4.5">4.5+ Sao</option>
+                                            <option value="5">5 Sao</option>
+                                        </select>
+                                        <i
+                                            class="las la-angle-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                                    </div>
+                                    <button id="gym-search-btn"
+                                        class="btn btn-primary h-auto py-5 px-10 group whitespace-nowrap">
+                                        <span class="pxl-button-text uppercase font-bold text-lg">Tìm kiếm</span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <div id="gym-status" class="hidden mb-6 text-center text-primary font-medium animate-pulse">
+                                Đang tải dữ liệu...
+                            </div>
+
+                            <div id="gym-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30">
+                                <!-- Gym Items -->
+                            </div>
+
+                            <div id="gym-empty" class="hidden text-center py-100">
+                                <i class="las la-search text-6xl text-gray-300 mb-4"></i>
+                                <h3 class="text-2xl font-bold dark:text-white">Không tìm thấy phòng tập nào</h3>
+                                <p class="text-gray-500">Thử tìm kiếm với từ khóa khác.</p>
+                            </div>
+
+                            <div id="pagination-container" class="mt-80 px-20"></div>
+                        </div>
+                    </section>
+                </main>
+
+                <!-- Footer -->
+                <footer class="site-footer relative bg-[#191B1D] dark:bg-dark py-80">
+                    <div class="container">
+                        <div class="grid grid-cols-12 gap-y-40">
+                            <div class="lg:col-span-4 col-span-12">
+                                <div class="footer-logo mb-30">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185">
+                                </div>
+                                <p class="text-white/60 text-lg leading-relaxed max-w-sm">
+                                    GYMFINDER là nền tảng hàng đầu giúp bạn tìm kiếm và kết nối với những phòng tập chất
+                                    lượng nhất.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-2 col-span-6">
+                                <h4 class="text-white text-xl font-bold mb-6">Liên kết</h4>
+                                <ul class="space-y-4">
+                                    <li><a href="index.html" class="text-white/60 hover:text-primary duration-300">Trang
+                                            chủ</a></li>
+                                    <li><a href="shop-standard.html"
+                                            class="text-white/60 hover:text-primary duration-300">Cửa hàng</a></li>
+                                    <li><a href="gym-finder.html"
+                                            class="text-white/60 hover:text-primary duration-300">Tìm phòng tập</a></li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-2 col-span-6">
+                                <h4 class="text-white text-xl font-bold mb-6">Dịch vụ</h4>
+                                <ul class="space-y-4">
+                                    <li><a href="#" class="text-white/60 hover:text-primary duration-300">Gói tập</a>
+                                    </li>
+                                    <li><a href="#" class="text-white/60 hover:text-primary duration-300">PT Cá nhân</a>
+                                    </li>
+                                    <li><a href="#" class="text-white/60 hover:text-primary duration-300">Dinh dưỡng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lg:col-span-4 col-span-12">
+                                <h4 class="text-white text-xl font-bold mb-6">Liên hệ</h4>
+                                <p class="text-white/60 mb-2">Hà Nội, Việt Nam</p>
+                                <p class="text-white/60 mb-2">Email: contact@gymfinder.com</p>
+                                <p class="text-white/60">Hotline: 1900 1234</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Review -->
+    <div id="review-modal" class="fixed inset-0 z-[10000] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm modal-close"></div>
+        <div
+            class="bg-white dark:bg-dark w-full max-w-lg rounded-3xl p-8 relative z-10 shadow-2xl border border-white/10">
+            <button
+                class="absolute top-4 right-4 text-3xl modal-close dark:text-white hover:text-primary duration-300">&times;</button>
+            <h2 class="text-2xl font-bold mb-6 dark:text-white">Đánh giá phòng tập</h2>
+            <div id="modal-gym-info" class="mb-6 pb-6 border-b border-gray-100 dark:border-white/10"></div>
+            <form id="gym-review-form">
+                <input type="hidden" id="modal-gym-id">
+                <div class="mb-6">
+                    <label class="block mb-2 font-medium dark:text-white">Số sao</label>
+                    <div class="flex gap-2 text-4xl text-gray-300" id="star-rating-selector">
+                        <i class="las la-star cursor-pointer star-btn" data-value="1"></i>
+                        <i class="las la-star cursor-pointer star-btn" data-value="2"></i>
+                        <i class="las la-star cursor-pointer star-btn" data-value="3"></i>
+                        <i class="las la-star cursor-pointer star-btn" data-value="4"></i>
+                        <i class="las la-star cursor-pointer star-btn" data-value="5"></i>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block mb-2 font-medium dark:text-white">Nhận xét của bạn</label>
+                    <textarea id="modal-review-comment" rows="4"
+                        class="w-full p-4 bg-light dark:bg-bodybg border border-black/5 dark:border-white/5 rounded-xl focus:ring-2 focus:ring-primary dark:text-white outline-none"
+                        placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full py-20 uppercase font-bold">Gửi đánh giá</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal"
+        class="fixed inset-0 bg-black/90 z-[3000] hidden flex items-center justify-center p-20 backdrop-blur-md">
+        <div class="bg-dark w-full max-w-lg rounded-[3rem] p-40 border border-white/5 relative shadow-2xl">
+            <button onclick="closeBookingModal()"
+                class="absolute top-25 right-25 text-white/20 hover:text-primary duration-300">
+                <i class="las la-times text-2xl"></i>
+            </button>
+            <div class="mb-30">
+                <span class="text-primary font-bold text-xs uppercase tracking-[0.2em] mb-10 block">Đặt lịch tập
+                    luyện</span>
+                <h2 id="modal-booking-gym-name" class="text-3xl font-black text-white italic">Tên phòng tập</h2>
+                <p id="modal-booking-price" class="text-white/40 text-sm mt-5">Giá: 50.000đ/giờ</p>
+            </div>
+
+            <form id="gym-booking-form" class="space-y-20">
+                <input type="hidden" id="booking-gym-id">
+
+                <div>
+                    <label class="block text-xs font-bold text-white/40 uppercase tracking-widest mb-10">Chọn
+                        ngày</label>
+                    <input type="date" id="booking-date" required
+                        class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 text-white outline-none focus:border-primary duration-300">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-white/40 uppercase tracking-widest mb-10">Chọn khung
+                        giờ</label>
+                    <select id="booking-time" required
+                        class="w-full bg-[#25282B] border border-white/10 rounded-2xl px-20 py-15 text-white outline-none focus:border-primary duration-300">
+                        <option value="08:00 - 09:00" class="bg-dark text-white">08:00 - 09:00</option>
+                        <option value="09:00 - 10:00" class="bg-dark text-white">09:00 - 10:00</option>
+                        <option value="10:00 - 11:00" class="bg-dark text-white">10:00 - 11:00</option>
+                        <option value="15:00 - 16:00" class="bg-dark text-white">15:00 - 16:00</option>
+                        <option value="16:00 - 17:00" class="bg-dark text-white">16:00 - 17:00</option>
+                        <option value="17:00 - 18:00" class="bg-dark text-white">17:00 - 18:00</option>
+                        <option value="18:00 - 19:00" class="bg-dark text-white">18:00 - 19:00</option>
+                        <option value="19:00 - 20:00" class="bg-dark text-white">19:00 - 20:00</option>
+                    </select>
+                </div>
+
+                <button type="submit"
+                    class="w-full text-sm font-black text-black bg-primary py-20 rounded-2xl hover:bg-white transition-all shadow-lg shadow-primary/20 uppercase tracking-widest">
+                    Xác nhận đặt lịch
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/gym-finder.js"></script>
+</body>
+
+</html>

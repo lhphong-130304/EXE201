@@ -1,0 +1,43 @@
+.clearfix:after, .clearfix:before {
+	@apply content-[''] table;
+}
+.line-left:after {
+	@apply content-[''] h-4 absolute top-[50%] left-[40%] w-[10%] bg-primary;
+}
+.line-left-box .line-num {
+	@apply absolute -right-37.75 top-[50%] translate-y-[-50%] bg-primary rounded-full shadow-[2px_2px_8px_0_rgba(0,0,0,0.3)] text-black text-[40px]/[80px] text-center font-bold size-80;
+}
+.line-right-box .line-num {
+	@apply absolute -left-37.75 top-[50%] translate-y-[-50%] bg-primary rounded-full shadow-[2px_2px_8px_0_rgba(0,0,0,0.3)] text-black text-[40px]/[80px] text-center font-bold size-80;
+}
+.arrow-bx {
+	@apply bg-[url(../images/arrow-1.png)] w-80 h-55 [background-size:100%] bg-no-repeat;
+}
+
+@media only screen and (max-width: 767px) {
+.line-left:after {
+	@apply left-0;
+}
+}
+.line-right:after {
+	@apply content-[''] h-4 absolute right-[40%] top-[50%] w-[10%] bg-primary;
+}
+
+.time-line:after {
+	@apply rounded content-[''] h-full absolute right-[50%] top-0 w-4 block bg-primary;
+}
+@media only screen and (max-width: 767px) {
+.time-line:after, .line-right:after {
+	@apply right-auto left-0;
+}
+}
+@media only screen and (max-width: 767px) {
+.time-line .line-left-box, .time-line .line-right-box {
+	@apply w-[90%] float-right;
+}
+}
+@media only screen and (max-width: 767px) {
+.time-line .line-left-box .line-num, .time-line .line-right-box .line-num {
+	@apply left-[-20px] size-40 text-base/[40px];
+}
+}

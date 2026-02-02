@@ -1,0 +1,26 @@
+.pricing-wrapper {
+    @apply after:duration-300 after:content-[''] after:absolute after:top-0 after:right-0 after:size-full after:bg-[url('../images/background/bg4.png')] after:bg-right after:bg-no-repeat after:-z-1 after:opacity-0;
+}
+.pricing-wrapper.active {
+    @apply bg-primary duration-300 after:opacity-100;
+}
+.pricing-wrapper.active .badge {
+    @apply inline-block;
+}
+.pricing-wrapper.active .title,
+.pricing-wrapper.active .title span{
+    @apply text-heading;
+}
+.pricing-wrapper.active p,
+.pricing-wrapper.active h4{
+    @apply text-heading;
+}
+.pricing-wrapper.active .list-items li{
+    @apply text-heading;
+}
+.pricing-wrapper.active .list-items li::before{
+    @apply bg-black/10 text-heading bg-none;
+}
+.pricing-wrapper.active .btn{
+    @apply bg-darkbtn text-white bg-none;
+}

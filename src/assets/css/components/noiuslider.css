@@ -1,0 +1,21 @@
+.noUi-horizontal {
+    @apply !h-4;
+}
+.noUi-connect {
+    @apply dark:!bg-light !bg-dark;
+}
+.noUi-target {
+    @apply !bg-black/15 !border-0 !shadow-none !rounded-none;
+}
+.noUi-horizontal .noUi-handle {
+    @apply !size-9 outline-[3px] dark:outline-white outline-black !border-0 !rounded-[1px] after:hidden before:hidden;
+}
+.noUi-touch-area {
+    @apply dark:bg-dark bg-white;
+}
+.noUi-tooltip{
+    @apply hidden;
+}
+.noUi-horizontal .noUi-handle{
+    @apply -right-9 -top-3;
+}

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+
+    <!-- PAGE TITLE HERE -->
+    <title>GYMFINDER - Gym & Fitness Center</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DexignZone">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="keywords"
+        content="GYMFINDER, Gym, Fitness, Workout, Personal Trainer, Responsive Website, SEO, Health, Exercise, Bodybuilding, Fitness Center, Training, Workout Plan">
+    <meta name="description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+
+    <meta property="og:title" content="GYMFINDER - Gym & Fitness Center">
+    <meta property="og:description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+    <meta property="og:image" content="https://gymfinder.dexignzone.com/tailwind/social-image.png">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:title" content="GYMFINDER - Gym & Fitness Center">
+    <meta name="twitter:description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+    <meta name="twitter:image" content="https://gymfinder.dexignzone.com/tailwind/social-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/vendor/lightgallery/dist/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/star-rating/css/star-rating.min.css">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="selection:bg-primary selection:text-white">
+
+    <div id="loading-area" class="pxl-loader style-2">
+        <div class="loading-spinner">
+            <div class="loading-dot1"></div>
+            <div class="loading-dot2"></div>
+        </div>
+    </div>
+
+    <div class="page-wraper">
+
+        <!-- Header -->
+        <header class="absolute top-0 left-0 w-full z-9999 site-header light-header">
+            <!-- main header -->
+            <div class="main-bar-wraper">
+                <div class="container-fluid">
+                    <div class="flex items-center 2xl:gap-40 gap-20 sm:py-40 py-20">
+                        <div class="logo xl:me-20">
+                            <!-- Logo for Dark Mode -->
+                            <div class="dark:block hidden">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                            <!-- Logo for Light Mode -->
+                            <div class="dark:hidden block">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-1 h-50 dark:bg-white/20 bg-black/20 xl:block hidden"></div>
+                        <div class="header-nav navbar-collapse full-sidenav grow custom-scroll">
+                            <div class="logo xl:hidden xl:mb-0 mb-50">
+                                <!-- Mobile Logo for Dark Mode -->
+                                <div class="dark:block hidden">
+                                    <a href="index.html">
+                                        <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                    </a>
+                                </div>
+                                <!-- Mobile Logo for Light Mode -->
+                                <div class="dark:hidden block">
+                                    <a href="index.html">
+                                        <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="nav navbar xl:flex xl:w-auto w-full">
+                                <li class="">
+                                    <a href="index.html"><span>Trang chủ</span></a>
+                                </li>
+                                <li class="">
+                                    <a href="team.html"><span>Đội ngũ</span></a>
+                                </li>
+                                <li class=""><a href="shop-standard.html"><span>Cửa hàng</span></a>
+                                </li>
+                                <li class=""><a href="gym-finder.html"><span>Tìm phòng tập</span></a>
+                                </li>
+                                <li class="xl:hidden border-t border-white/10 mt-10 pt-10">
+                                    <a href="login.html" id="login-btn-mobile"><span>Đăng nhập</span></a>
+                                </li>
+                                <li class="xl:hidden hidden" id="user-info-mobile">
+                                    <div class="flex items-center gap-10">
+                                        <a href="user-dashboard.html" id="user-name-link-mobile"
+                                            class="dark:text-white text-black">
+                                            <span id="user-display-name-mobile">Hi, User!</span>
+                                        </a>
+                                    </div>
+                                    <a href="javascript:void(0)" id="logout-btn-mobile"
+                                        class="mt-5 dark:text-white text-black"><span>Đăng
+                                            xuất</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex xl:gap-20 gap-10">
+                            <button type="button"
+                                class="size-48 cursor-pointer inline-flex items-center justify-center dark:bg-[#2C2E30] bg-[#F1F1F1] theme-btn">
+                                <span class="dark-theme dark:block hidden">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 2V4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 20V22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M4.93005 4.92999L6.34005 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.66 17.66L19.07 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2 12H4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20 12H22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.34005 17.66L4.93005 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.07 4.92999L17.66 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="light-theme dark:hidden block">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="auth-buttons-desktop" class="flex items-center xl:gap-20 gap-10">
+                                <a href="login.html" id="login-btn" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Đăng nhập</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div id="user-info" class="hidden items-center gap-10 max-xl:hidden">
+                                    <a href="user-dashboard.html" id="user-name-link"
+                                        class="dark:text-white text-black text-sm hover:text-primary transition-all">
+                                        <span id="user-display-name">User</span>
+                                    </a>
+                                    <a href="javascript:void(0)" id="logout-btn"
+                                        class="btn btn-primary max-xl:hidden group">
+                                        <span class="pxl-button-text">Đăng xuất</span>
+                                    </a>
+                                </div>
+                                <a href="shop-cart.html" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Giỏ hàng</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="menu-btn relative xl:hidden flex items-center justify-center size-48">
+                                    <span class="inline-block align-middle space-y-6 toogle-btn">
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main header END -->
+        </header>
+        <!-- Header END -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div class="page-content">
+                    <section class="pt-156 pb-60">
+                        <div class="container">
+                            <div class="grid grid-cols-12 gap-20">
+                                <div class="lg:col-span-6 col-span-12 xl:ps-20">
+                                    <div class="z-1">
+                                        <div class="z-1">
+                                            <div class="relative overflow-hidden bg-white flex items-center justify-center p-20 border border-secondary/10 rounded-lg group"
+                                                id="detail-product-image-container">
+                                                <img id="detail-product-image" src="assets/images/product/1.png"
+                                                    alt="Product Image"
+                                                    class="w-full h-auto object-contain max-h-[500px] duration-500">
+                                                <i
+                                                    class="fa-solid fa-expand dz-maximize absolute top-20 right-20 size-40 text-2xl !flex items-center justify-center duration-500 opacity-0 group-hover:!opacity-100 bg-white rounded-full shadow-lg cursor-pointer hover:text-primary"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-6 col-span-12 xl:ps-20">
+                                    <div class="xl:p-20">
+
+                                        <h3 id="detail-product-name" class="sm:text-[35px]/52 text-2xxl font-medium">
+                                            UltraSoft Denim Shell Tank
+                                            Top</h3>
+                                        <div class="flex items-center gap-10 mb-20">
+                                            <ul id="detail-product-rating-stars">
+                                                <li class="inline-block text-sm leading-none"><i
+                                                        class="las la-star text-yellow"></i></li>
+                                                <li class="inline-block text-sm leading-none"><i
+                                                        class="las la-star text-yellow"></i></li>
+                                                <li class="inline-block text-sm leading-none"><i
+                                                        class="las la-star text-yellow"></i></li>
+                                                <li class="inline-block text-sm leading-none"><i
+                                                        class="las la-star text-grey"></i></li>
+                                                <li class="inline-block text-sm leading-none"><i
+                                                        class="las la-star text-grey"></i></li>
+                                            </ul>
+                                            <span id="detail-product-rating-text"
+                                                class="text-sm dark:text-white text-dark">4.7 Đánh giá</span>
+
+                                        </div>
+                                        <p id="detail-product-description" class="text-2sm mb-16">Lorem Ipsum is simply
+                                            dummy text of the printing and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</p>
+                                        <div class="sm:mb-30 mb-20">
+                                            <span
+                                                class="block text-sm dark:text-lightgrey text-bodytext mb-12">Giá</span>
+                                            <span class="text-2xl font-medium dark:text-white text-dark"><span
+                                                    id="detail-product-price">$125.75</span> <del
+                                                    id="detail-product-original-price-container"
+                                                    class="text-lg dark:text-lightgrey text-bodytext opacity-60 font-normal ms-16">$132.17</del></span>
+                                        </div>
+                                        <div class="mb-20" id="detail-product-stock"></div>
+                                        <div
+                                            class="flex items-start xl:gap-40 gap-20 sm:mb-36 mb-20 sm:flex-row flex-col">
+                                            <div class="input-group">
+                                                <h6 class="block text-2sm font-semibold mb-14">Số lượng</h6>
+                                                <span class="flex gap-10">
+                                                    <button type="button" value="-" data-field="quantity"
+                                                        class="button-minus size-40 leading-[27px] text-center cursor-pointer text-xl bg-light"><i
+                                                            class="las la-minus text-lg"></i></button>
+                                                    <input type="number" id="detail-product-quantity" step="1" value="1"
+                                                        name="quantity"
+                                                        class="touchspin h-40 w-58 leading-[27px] text-center dark:text-white text-dark border border-[#D7D7D7] outline-none">
+                                                    <button type="button" value="+" data-field="quantity"
+                                                        class="button-plus size-40 leading-[27px] text-center cursor-pointer text-xl bg-light"><i
+                                                            class="las la-plus text-lg"></i></button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            class="flex sm:items-center items-start sm:gap-28 gap-20 sm:mb-36 mb-20 sm:flex-row flex-col">
+                                            <a href="javascript:void(0);" id="add-to-cart-btn"
+                                                class="btn btn-black font-normal py-10 group">
+                                                <span class="pxl-button-text">THÊM VÀO GIỎ</span>
+                                                <span class="block ms-5 overflow-hidden">
+                                                    <svg class="group-hover:animate-toTopFromBottom" width="20"
+                                                        height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.83337 14.1667L14.1667 5.83334" stroke="white"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                        <path d="M5.83337 5.83334H14.1667V14.1667" stroke="white"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a href="shop-wishlist.html" class="btn btn-light font-normal py-10">
+                                                <span class="block me-5">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9 16.9986C8.74374 16.9986 8.49669 16.9058 8.30415 16.7371C7.577 16.1013 6.87593 15.5038 6.2574 14.9767L6.25424 14.974C4.44081 13.4286 2.87485 12.094 1.78528 10.7794C0.567307 9.30968 0 7.9162 0 6.39391C0 4.91487 0.507156 3.55037 1.42795 2.55157C2.35973 1.54097 3.63826 0.984375 5.02844 0.984375C6.06747 0.984375 7.01903 1.31287 7.8566 1.96065C8.2793 2.28763 8.66245 2.68781 9 3.15459C9.33769 2.68781 9.7207 2.28763 10.1435 1.96065C10.9811 1.31287 11.9327 0.984375 12.9717 0.984375C14.3617 0.984375 15.6404 1.54097 16.5722 2.55157C17.493 3.55037 18 4.91487 18 6.39391C18 7.9162 17.4328 9.30968 16.2149 10.7792C15.1253 12.094 13.5595 13.4285 11.7463 14.9737C11.1267 15.5016 10.4245 16.1001 9.69571 16.7374C9.50331 16.9058 9.25612 16.9986 9 16.9986ZM5.02844 2.03879C3.93626 2.03879 2.93294 2.47467 2.20303 3.26624C1.46228 4.06975 1.05428 5.18047 1.05428 6.39391C1.05428 7.67422 1.53012 8.81927 2.59703 10.1066C3.62823 11.3509 5.16206 12.658 6.938 14.1715L6.9413 14.1743C7.56216 14.7034 8.26598 15.3033 8.99849 15.9438C9.7354 15.302 10.4403 14.7012 11.0624 14.1713C12.8382 12.6578 14.3719 11.3509 15.4031 10.1066C16.4699 8.81927 16.9457 7.67422 16.9457 6.39391C16.9457 5.18047 16.5377 4.06975 15.797 3.26624C15.0672 2.47467 14.0637 2.03879 12.9717 2.03879C12.1716 2.03879 11.437 2.29312 10.7884 2.79465C10.2104 3.24179 9.80777 3.80704 9.5717 4.20255C9.4503 4.40593 9.23662 4.52733 9 4.52733C8.76338 4.52733 8.5497 4.40593 8.4283 4.20255C8.19237 3.80704 7.78972 3.24179 7.21156 2.79465C6.56296 2.29312 5.82838 2.03879 5.02844 2.03879Z"
+                                                            fill="#191B1D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="pxl-button-text">Thêm vào yêu thích</span>
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="sm:mb-45 mb-20 pt-20 border-t border-black/20 dark:border-white/20 relative dark:text-white text-dark">
+
+                                            <ul class="flex flex-wrap items-center text-sm mb-10">
+                                                <li class="mr-10"><strong class="text-2sm font-semibold">Danh
+                                                        mục:</strong></li>
+                                                <li id="detail-product-category" class="mr-10"><a
+                                                        href="shop-standard.html">Dresses</a></li>
+                                            </ul>
+
+                                            <ul class="flex flex-wrap items-center mb-10">
+                                                <li class="text-base mr-20"><strong class="text-2sm font-semibold">Chia
+                                                        sẻ:</strong></li>
+                                                <li class="text-base mr-20">
+                                                    <a class="hover:text-primary"
+                                                        href="https://www.facebook.com/dexignzone" target="_blank">
+                                                        <i class="fa-brands fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="text-base mr-20">
+                                                    <a class="hover:text-primary"
+                                                        href="https://www.linkedin.com/showcase/3686700/admin/"
+                                                        target="_blank">
+                                                        <i class="fa-brands fa-linkedin-in"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="text-base mr-20">
+                                                    <a class="hover:text-primary"
+                                                        href="https://www.instagram.com/dexignzone/" target="_blank">
+                                                        <i class="fa-brands fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="text-base mr-20">
+                                                    <a class="hover:text-primary" href="https://twitter.com/dexignzones"
+                                                        target="_blank">
+                                                        <i class="fa-brands fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="flex items-center">
+                                            <li class="flex items-center xl:mr-30 mr-8">
+                                                <div class="h-50 min-w-50 flex items-center justify-center">
+                                                    <svg width="60" height="42" viewBox="0 0 60 42" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_556_1739)">
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M51.5148 39.5473C50.4981 39.548 49.504 39.2443 48.6582 38.6744C47.8124 38.1046 47.153 37.2943 46.7634 36.3459C46.3738 35.3976 46.2715 34.354 46.4694 33.3469C46.6673 32.3399 47.1565 31.4147 47.8752 30.6885C48.5939 29.9623 49.5098 29.4676 50.507 29.267C51.5041 29.0664 52.5378 29.169 53.4772 29.5617C54.4167 29.9544 55.2196 30.6197 55.7846 31.4733C56.3495 32.3269 56.6511 33.3305 56.6511 34.3571C56.6504 35.7328 56.1092 37.052 55.1462 38.0251C54.1832 38.9981 52.8772 39.5456 51.5148 39.5473ZM51.5148 31.0603C50.8689 31.0595 50.2373 31.2523 49.6999 31.6141C49.1625 31.9759 48.7434 32.4905 48.4957 33.0929C48.248 33.6952 48.1828 34.3582 48.3084 34.998C48.4339 35.6378 48.7446 36.2256 49.2011 36.687C49.6575 37.1485 50.2393 37.4628 50.8727 37.5904C51.5062 37.7179 52.1629 37.6528 52.7597 37.4034C53.3565 37.154 53.8667 36.7314 54.2256 36.1892C54.5845 35.6469 54.7761 35.0094 54.7761 34.3571C54.7758 33.4835 54.4322 32.6457 53.8208 32.0276C53.2093 31.4095 52.38 31.0616 51.5148 31.0603Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M24.4302 39.5473C23.4134 39.5483 22.4191 39.2447 21.5732 38.675C20.7272 38.1053 20.0677 37.2951 19.6779 36.3468C19.2881 35.3985 19.1856 34.3548 19.3833 33.3477C19.5811 32.3406 20.0702 31.4153 20.7889 30.6889C21.5075 29.9626 22.4234 29.4678 23.4206 29.2671C24.4178 29.0664 25.4515 29.1689 26.391 29.5616C27.3305 29.9543 28.1336 30.6195 28.6986 31.4731C29.2636 32.3267 29.5652 33.3304 29.5652 34.3571C29.5642 35.7325 29.023 37.0513 28.0604 38.0242C27.0977 38.9972 25.7922 39.5449 24.4302 39.5473ZM24.4302 31.0603C23.7842 31.0593 23.1524 31.2518 22.6149 31.6134C22.0773 31.9751 21.658 32.4897 21.4101 33.092C21.1622 33.6943 21.0969 34.3574 21.2223 34.9972C21.3477 35.6371 21.6583 36.225 22.1147 36.6866C22.5711 37.1482 23.1529 37.4626 23.7863 37.5903C24.4198 37.7179 25.0766 37.6529 25.6735 37.4035C26.2704 37.1541 26.7806 36.7316 27.1396 36.1893C27.4985 35.647 27.6902 35.0094 27.6902 34.3571C27.6895 33.4838 27.346 32.6464 26.7349 32.0284C26.1238 31.4104 25.295 31.0623 24.4302 31.0603Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M58.2745 35.3027H55.7108C55.4621 35.3027 55.2237 35.2029 55.0479 35.0254C54.8721 34.8479 54.7733 34.6071 54.7733 34.356C54.7733 34.1049 54.8721 33.8642 55.0479 33.6866C55.2237 33.5091 55.4621 33.4094 55.7108 33.4094H58.0095V28.3896C58.0089 27.7109 57.8368 27.0437 57.5095 26.4509L52.4345 17.2634C52.3912 17.185 52.3279 17.1196 52.2512 17.0742C52.1745 17.0287 52.0872 17.0047 51.9983 17.0046H45.082V33.4132H47.3145C47.5632 33.4132 47.8016 33.5129 47.9774 33.6904C48.1533 33.868 48.252 34.1087 48.252 34.3598C48.252 34.6109 48.1533 34.8517 47.9774 35.0292C47.8016 35.2067 47.5632 35.3064 47.3145 35.3064H44.1445C43.8959 35.3064 43.6574 35.2067 43.4816 35.0292C43.3058 34.8517 43.207 34.6109 43.207 34.3598V16.058C43.207 15.8069 43.3058 15.5661 43.4816 15.3886C43.6574 15.2111 43.8959 15.1113 44.1445 15.1113H51.9983C52.4212 15.1111 52.8366 15.225 53.2013 15.4411C53.5661 15.6572 53.8671 15.9678 54.0733 16.3407L59.147 25.5295C59.6294 26.4041 59.8828 27.3885 59.8833 28.3896V33.6782C59.8826 34.1088 59.7129 34.5216 59.4114 34.8261C59.1098 35.1306 58.701 35.302 58.2745 35.3027Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M20.2309 35.3035H11.2422C10.9935 35.3035 10.7551 35.2038 10.5793 35.0262C10.4035 34.8487 10.3047 34.6079 10.3047 34.3569V27.0765C10.3047 26.8255 10.4035 26.5847 10.5793 26.4071C10.7551 26.2296 10.9935 26.1299 11.2422 26.1299C11.4908 26.1299 11.7293 26.2296 11.9051 26.4071C12.0809 26.5847 12.1797 26.8255 12.1797 27.0765V33.4102H20.2309C20.4796 33.4102 20.718 33.51 20.8938 33.6875C21.0697 33.865 21.1684 34.1058 21.1684 34.3569C21.1684 34.6079 21.0697 34.8487 20.8938 35.0262C20.718 35.2038 20.4796 35.3035 20.2309 35.3035Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M11.2422 23.7175C10.9935 23.7175 10.7551 23.6177 10.5793 23.4402C10.4035 23.2627 10.3047 23.0219 10.3047 22.7708V16.4144C10.3047 16.1634 10.4035 15.9226 10.5793 15.745C10.7551 15.5675 10.9935 15.4678 11.2422 15.4678C11.4908 15.4678 11.7293 15.5675 11.9051 15.745C12.0809 15.9226 12.1797 16.1634 12.1797 16.4144V22.7746C12.1787 23.025 12.0795 23.2648 11.9038 23.4416C11.7281 23.6183 11.4902 23.7175 11.2422 23.7175Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M44.1484 35.3031H28.6272C28.3785 35.3031 28.1401 35.2034 27.9643 35.0258C27.7885 34.8483 27.6897 34.6075 27.6897 34.3564C27.6897 34.1054 27.7885 33.8646 27.9643 33.6871C28.1401 33.5095 28.3785 33.4098 28.6272 33.4098H43.2109V8.64427H12.1797V12.5432C12.1797 12.7943 12.0809 13.035 11.9051 13.2126C11.7293 13.3901 11.4908 13.4898 11.2422 13.4898C10.9935 13.4898 10.7551 13.3901 10.5793 13.2126C10.4035 13.035 10.3047 12.7943 10.3047 12.5432V8.47009C10.3053 8.01414 10.4851 7.57707 10.8045 7.25478C11.1239 6.9325 11.5569 6.75131 12.0084 6.75098H43.3834C43.8348 6.75164 44.2674 6.93298 44.5866 7.25523C44.9057 7.57748 45.0853 8.01435 45.0859 8.47009V34.3564C45.0859 34.6075 44.9872 34.8483 44.8114 35.0258C44.6355 35.2034 44.3971 35.3031 44.1484 35.3031Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M14.9456 28.0232H3.04688C2.79823 28.0232 2.55978 27.9234 2.38396 27.7459C2.20815 27.5684 2.10938 27.3276 2.10938 27.0765C2.10938 26.8255 2.20815 26.5847 2.38396 26.4071C2.55978 26.2296 2.79823 26.1299 3.04688 26.1299H14.9456C15.1943 26.1299 15.4327 26.2296 15.6085 26.4071C15.7844 26.5847 15.8831 26.8255 15.8831 27.0765C15.8831 27.3276 15.7844 27.5684 15.6085 27.7459C15.4327 27.9234 15.1943 28.0232 14.9456 28.0232Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M24.428 23.7185H7.82422C7.57558 23.7185 7.33712 23.6188 7.16131 23.4412C6.98549 23.2637 6.88672 23.0229 6.88672 22.7718C6.88672 22.5208 6.98549 22.28 7.16131 22.1025C7.33712 21.9249 7.57558 21.8252 7.82422 21.8252H24.428C24.6766 21.8252 24.9151 21.9249 25.0909 22.1025C25.2667 22.28 25.3655 22.5208 25.3655 22.7718C25.3655 23.0229 25.2667 23.2637 25.0909 23.4412C24.9151 23.6188 24.6766 23.7185 24.428 23.7185Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M7.30797 18.7195H0.824219C0.575578 18.7195 0.337122 18.6197 0.161306 18.4422C-0.0145092 18.2647 -0.113281 18.0239 -0.113281 17.7728C-0.113281 17.5218 -0.0145092 17.281 0.161306 17.1034C0.337122 16.9259 0.575578 16.8262 0.824219 16.8262H7.30797C7.55661 16.8262 7.79507 16.9259 7.97088 17.1034C8.1467 17.281 8.24547 17.5218 8.24547 17.7728C8.24547 18.0239 8.1467 18.2647 7.97088 18.4422C7.79507 18.6197 7.55661 18.7195 7.30797 18.7195Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M17.7028 13.49H6.25781C6.00917 13.49 5.77072 13.3902 5.5949 13.2127C5.41908 13.0352 5.32031 12.7944 5.32031 12.5433C5.32031 12.2923 5.41908 12.0515 5.5949 11.8739C5.77072 11.6964 6.00917 11.5967 6.25781 11.5967H17.7028C17.9515 11.5967 18.1899 11.6964 18.3657 11.8739C18.5415 12.0515 18.6403 12.2923 18.6403 12.5433C18.6403 12.7944 18.5415 13.0352 18.3657 13.2127C18.1899 13.3902 17.9515 13.49 17.7028 13.49Z"
+                                                                fill="#191B1D" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_556_1739">
+                                                                <rect width="60" height="42" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                                <div class="xl:ml-20 ml-10">
+                                                    <span class="dark:text-white text-dark text-2xs">MIỄN PHÍ</span>
+                                                    <h6 class="dark:text-lightgrey text-bodytext">Giao hàng</h6>
+                                                </div>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <div class="h-50 min-w-50 flex items-center justify-center">
+                                                    <svg width="42" height="43" viewBox="0 0 42 43" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_556_1730)">
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M40.6875 15.1855H34.125H28.875H22.3125C21.9188 15.1855 21.6562 15.448 21.6562 15.8418V20.2387L20.0156 19.8449L18.2437 18.073C20.2125 16.2355 20.3438 12.3637 20.3438 11.248C22.7719 11.248 24.4781 10.5918 25.1344 9.41055C25.3969 8.88555 25.5938 8.03242 24.8719 6.9168C24.15 5.8668 23.2313 5.3418 21.9844 5.3418C21.9188 5.3418 19.6219 5.3418 19.6219 5.3418C19.425 4.16055 18.6375 1.6668 15.5531 0.944922C14.8969 0.813672 13.9781 0.748047 13.7812 0.748047C6.95625 0.748047 5.90625 4.0293 5.90625 5.99805V9.2793C5.90625 9.73867 6.10312 10.2637 6.49687 10.6574C6.16875 11.0512 5.90625 11.7074 5.90625 12.5605C5.90625 14.2012 7.02187 14.923 8.00625 15.1199C8.33437 16.1043 8.79375 16.8262 9.25313 17.4168L6.825 19.8449C6.3 20.4355 6.95625 21.0262 6.95625 21.0262L4.13438 23.848C3.87188 24.1762 1.3125 26.8012 1.3125 28.9668C1.3125 29.098 1.3125 29.1637 1.37812 29.2293L4.65937 35.7918C4.725 35.9887 4.92187 36.0543 5.05312 36.1199C5.11875 36.1199 5.70937 36.3168 6.5625 36.3168C6.5625 36.3824 6.49687 40.0574 6.49687 40.0574C6.49687 40.4512 6.75937 40.7137 7.15312 40.7137C7.54688 40.7137 7.80937 40.4512 7.80937 40.0574V38.2199C8.79375 39.4012 10.3687 40.7137 12.4031 40.7137C14.4375 40.7137 18.1781 39.4012 21.4594 38.2199C22.05 38.023 22.575 37.8262 23.1 37.6293C23.2313 37.5637 23.3625 37.5637 23.5594 37.498V40.123C23.5594 40.5168 23.8219 40.7793 24.2156 40.7793C24.6094 40.7793 24.8719 40.5168 24.8719 40.123V37.1699C26.0531 36.9074 27.1688 36.7762 28.1531 36.8418H32.7469C33.8625 36.8418 35.3719 36.448 35.8312 35.2668C35.9625 34.9387 36.0281 34.6105 36.0281 34.2168H40.6219C41.0156 34.2168 41.2781 33.9543 41.2781 33.5605V15.8418C41.3438 15.448 41.0812 15.1855 40.6875 15.1855ZM33.4688 16.498V20.0418L31.7625 19.1887C31.6969 19.123 31.6313 19.123 31.5 19.123C31.3687 19.123 31.3031 19.123 31.2375 19.1887L29.5312 20.0418V16.498H33.4688ZM14.3062 20.1074C14.2406 19.9762 13.9125 19.7793 13.9125 19.7793C14.7 19.7793 15.3562 19.648 16.0125 19.4512L15.75 20.2387L15.0938 21.9449C15.0938 21.9449 14.3719 20.1074 14.3062 20.1074ZM17.5219 19.1887L18.9 20.5668L18.2437 21.8137L17.1281 20.3043L17.5219 19.1887ZM18.7031 6.6543C18.1125 7.11367 17.5875 7.7043 17.1938 8.2293C16.0781 9.86992 15.0938 9.93555 15.0938 9.93555H11.6156C11.8781 9.67305 12.1406 9.34492 12.3375 9.0168C13.125 7.83555 14.5688 6.6543 15.75 6.6543H18.7031ZM23.7563 7.7043C24.0844 8.16367 24.15 8.55742 23.9531 8.81992C23.6906 9.34492 22.575 9.93555 20.3438 9.93555H20.2781C20.1469 8.7543 19.95 7.90117 19.8188 7.4418C20.5406 6.98242 21.2625 6.6543 21.9844 6.6543C22.7062 6.6543 23.2969 6.98242 23.7563 7.7043ZM7.21875 5.99805C7.21875 3.63555 9.12188 2.65117 11.2875 2.25742C10.1719 3.43867 9.84375 4.94805 9.84375 5.99805C9.84375 6.3918 10.1062 6.6543 10.5 6.6543C10.8281 6.6543 11.1562 6.3918 11.1562 5.99805C11.1562 5.6043 11.2875 2.4543 14.5031 2.12617C17.325 2.38867 18.1125 4.35742 18.3094 5.3418H15.75C13.9781 5.3418 12.2063 6.78555 11.2875 8.2293C10.1719 9.86992 9.1875 9.93555 9.1875 9.93555H7.875C7.35 9.93555 7.21875 9.60742 7.21875 9.2793V5.99805ZM8.53125 13.873C8.33437 13.873 7.21875 13.8074 7.21875 12.5605C7.21875 11.3793 7.74375 11.248 7.875 11.248H15.0938C15.2906 11.248 16.8 11.1824 18.2437 9.0168C18.375 8.81992 18.5063 8.62305 18.7031 8.42617C18.8344 9.0168 19.0312 10.0012 19.0312 11.3137C19.0312 11.3793 19.2938 14.9887 17.3906 17.0887C16.5375 18.0074 15.2906 18.4668 13.7812 18.4668C13.7156 18.4668 10.3031 18.4012 9.1875 14.3324C9.05625 14.0699 8.79375 13.873 8.53125 13.873ZM9.90938 18.6637L12.7969 20.5668L11.025 22.798L8.1375 20.4355L9.90938 18.6637ZM2.625 28.8355C2.75625 27.4574 4.39687 25.4887 5.05312 24.8324L7.94063 21.9449L10.6969 24.2418C10.8281 24.373 10.9594 24.373 11.0906 24.373H11.1562C11.3531 24.373 11.4844 24.2418 11.6156 24.1105L13.5188 21.6824L14.4375 23.9137C14.5688 24.1762 14.7656 24.3074 15.0281 24.3074C15.2906 24.3074 15.5531 24.1762 15.6187 23.9137L16.4719 21.748L17.7188 23.4543C17.85 23.6512 18.0469 23.7168 18.3094 23.7168C18.5063 23.7168 18.7031 23.5855 18.8344 23.3887L19.8844 21.223L21.525 21.6168V32.0512C20.5406 32.3793 19.3594 32.773 18.1125 33.1668C17.1281 33.4949 16.1438 33.823 15.225 34.1512C14.1094 34.5449 12.7969 34.0855 12.2063 33.0355L9.64687 28.6387C9.45 28.3105 9.05625 28.2449 8.72813 28.4418C8.4 28.6387 8.33437 29.0324 8.53125 29.3605L10.3688 32.3793C9.31875 35.4637 6.49688 35.2012 5.64375 35.0043L2.625 28.8355ZM34.65 34.7418C34.4531 35.2668 33.5344 35.5293 32.8125 35.5293H28.2844C26.1187 35.398 23.8875 36.0543 22.7719 36.448C22.2469 36.6449 21.6562 36.8418 21.1313 37.0387C18.0469 38.0887 14.3062 39.4668 12.4688 39.4668C10.1719 39.4668 8.53125 37.1043 8.00625 36.2512C9.12187 35.9887 10.3688 35.398 11.2875 33.823C12.0094 34.9387 13.2563 35.5949 14.5688 35.5949C14.9625 35.5949 15.3562 35.5293 15.75 35.398C16.6031 35.1355 17.5875 34.8074 18.6375 34.4137C21.525 33.4293 25.0687 32.248 25.9875 32.248H30.5812C30.7781 32.248 31.1719 32.3793 31.2375 32.9043H29.5312C29.1375 32.9043 28.875 33.1668 28.875 33.5605C28.875 33.9543 29.1375 34.2168 29.5312 34.2168C29.5312 34.2168 34.5187 34.2824 34.7812 34.2824C34.7812 34.4137 34.7156 34.6105 34.65 34.7418ZM40.0312 32.9043H32.55C32.4844 31.4605 31.3687 30.9355 30.5812 30.9355H25.9875C25.3969 30.9355 24.4125 31.198 22.9688 31.5918V16.498H28.2188V21.0918C28.2188 21.2887 28.35 21.5512 28.5469 21.6824C28.7437 21.8137 29.0063 21.8137 29.2031 21.6824L31.5656 20.5012L33.9281 21.6824C33.9281 21.748 33.9938 21.748 34.125 21.748C34.2562 21.748 34.3875 21.748 34.4531 21.6824C34.65 21.5512 34.7812 21.3543 34.7812 21.0918V16.498H40.0312V32.9043Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M28.2188 28.3105H25.5938C25.2 28.3105 24.9375 28.573 24.9375 28.9668C24.9375 29.3605 25.2 29.623 25.5938 29.623H28.2188C28.6125 29.623 28.875 29.3605 28.875 28.9668C28.875 28.573 28.6125 28.3105 28.2188 28.3105Z"
+                                                                fill="#191B1D" />
+                                                            <path class="fill:dark dark:fill-white"
+                                                                d="M25.5938 27.6543H26.9062C27.3 27.6543 27.5625 27.3918 27.5625 26.998C27.5625 26.6043 27.3 26.3418 26.9062 26.3418H25.5938C25.2 26.3418 24.9375 26.6043 24.9375 26.998C24.9375 27.3918 25.2 27.6543 25.5938 27.6543Z"
+                                                                fill="#191B1D" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_556_1730">
+                                                                <rect width="42" height="42" fill="white"
+                                                                    transform="translate(0 0.0917969)" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                                <div class="xl:ml-20 ml-10">
+                                                    <span class="dark:text-white text-dark text-2xs">Đổi trả dễ
+                                                        dàng</span>
+                                                    <h6 class="dark:text-lightgrey text-bodytext">Trong 30 ngày</h6>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="bg-primary bg-[url('../images/background/pic1.png')] bg-blend-multiply">
+                        <div class="lg:py-123 sm:py-80 py-50">
+                            <div class="container">
+                                <div class="grid grid-cols-12 gap-20 items-center">
+                                    <div class="lg:col-span-3 col-span-12 lg:mb-0 sm:mb-30 mb-10">
+                                        <div class="xl:pe-72">
+                                            <h3 class="text-2xxl/35 font-medium text-dark">
+                                                Đồng hành cùng cộng đồng Fitness trong 20 năm qua
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-9 col-span-12">
+                                        <div class="swiper brand-swiper2">
+                                            <div class="swiper-wrapper items-center">
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/big_muscles.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/labrada.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/body_fortress.avif" alt=""
+                                                        class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/Optimum_Nutrition_Logo.png" alt=""
+                                                        class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/myprotein-logo.png" alt=""
+                                                        class="block">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- footer -->
+                    <footer class="relative overflow-hidden z-2 bg-bodybg">
+                        <!-- Upper Footer -->
+                        <div class="xl:pt-135 sm:pt-100 pt-60">
+                            <div class="container">
+                                <div class="grid grid-cols-12 sm:gap-10 sm:mb-100 mb-30">
+                                    <div class="md:col-span-8 col-span-12">
+                                        <h2
+                                            class="xl:text-[4.2vw]/[4.5vw] sm:text-6xl text-[40px]/50 sm:mb-55 mb-20 font-medium xl:max-w-700 text-white">
+                                            Cùng GYMFINDER chinh phục vóc dáng mơ ước. </h2>
+                                        <div class="grid grid-cols-12 gap-10">
+                                            <div class="xl:col-span-3 sm:col-span-6 col-span-12 sm:mb-0 mb-10">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Liên hệ </h4>
+                                                <ul>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="tel:+12345678910">+1 234 567 8910</a>
+                                                    </li>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="tel:+9876543210">+1 987 654 3210</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="xl:col-span-5 sm:col-span-6 col-span-12 sm:mb-0 mb-10">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Gửi tin nhắn</h4>
+                                                <ul>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="mailto:hello@example.com">hello@example.com</a>
+                                                    </li>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="mailto:info@example.com">info@example.com</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md:col-span-4 col-span-12">
+                                        <div class="grid grid-cols-12">
+                                            <div class="sm:col-span-6 col-span-12 sm:mb-0 mb-10Right">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Dịch vụ</h4>
+                                                <ul>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Gói tập Hội viên</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Thực phẩm Bổ sung</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Lớp học Yoga</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Tư vấn PT</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="sm:col-span-6 col-span-12 sm:mb-0 mb-10Right">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Công ty</h4>
+                                                <ul>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="index.html">Trang chủ</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="team.html">Đội ngũ</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="shop-standard.html">Sản phẩm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-span-12">
+                                                <div class="sm:mt-50 mt-10Right">
+                                                    <h5 class="text-2xl sm:mb-12 text-white">Bản tin</h5>
+                                                    <div class="">
+                                                        <form class="dzSubscribe" action="assets/script/mailchamp.php"
+                                                            method="post">
+                                                            <div class="dzSubscribeMsg"></div>
+                                                            <div class="form-group">
+                                                                <div
+                                                                    class="mb-10 relative flex flex-wrap items-stretch w-full">
+                                                                    <input name="dzEmail" required="required"
+                                                                        type="email"
+                                                                        class="relative w-[1%] flex-auto py-12 pe-40 border-b-2 border-white text-white outline-none"
+                                                                        placeholder="Địa chỉ Email">
+                                                                    <button name="submit" value="Submit" type="submit"
+                                                                        class=" absolute right-0 top-0 p-8 z-9 h-full cursor-pointer">
+                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M18.8583 2.3165L15.7249 16.8748C15.6583 17.1915 15.4499 17.4582 15.1583 17.5998C14.8666 17.7415 14.5333 17.7415 14.2333 17.5998L11.8999 16.4665C11.8999 16.4665 8.91661 18.6248 8.30827 18.9082C8.19161 18.9665 8.14161 18.9582 8.05827 18.9582C7.94161 18.9582 7.81661 18.9248 7.71661 18.8582C7.54161 18.7415 7.43327 18.5498 7.43327 18.3415V13.9165C7.42494 13.8248 7.43327 13.7332 7.48327 13.6415C7.48327 13.6415 7.49161 13.6248 7.49994 13.6165C7.52494 13.5748 7.54994 13.5332 7.58327 13.4915L15.2583 5.0915L5.71661 12.9415C5.64161 13.0165 5.54161 13.0832 5.43327 13.1082C5.25827 13.1582 5.06661 13.1248 4.91661 13.0248L1.70827 11.5748C1.34994 11.3998 1.12494 11.0498 1.10827 10.6498C1.09994 10.2582 1.30827 9.8915 1.65827 9.69984L17.3249 1.17484C17.6916 0.974836 18.1249 1.00817 18.4666 1.25817C18.7999 1.50817 18.9499 1.9165 18.8666 2.3165H18.8583Z"
+                                                                                fill="#E3FF75" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="border-t border-white/30">
+                            </div>
+                        </div>
+                        <!-- Lower Footer -->
+
+                    </footer>
+                    <!-- footer END -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollProgress" title="Scroll to top"
+        class="fixed z-999 right-20 bottom-20 size-40 rounded-full dark:bg-white dark:text-black bg-bodybg text-white cursor-pointer opacity-0 pointer-events-none duration-500 flex items-center justify-center">
+        <span class="icon text-xs relative z-1"><i class="fa-solid fa-chevron-up"></i></span>
+        <svg class="absolute top-0 left-0 -rotate-90" width="40" height="40">
+            <circle class="dark:stroke-black stroke-white" cx="20" cy="20" r="17" stroke="#000" stroke-width="2"
+                fill="none" stroke-linecap="round" stroke-dasharray="100.53" stroke-dashoffset="100.53"></circle>
+        </svg>
+    </button>
+
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/vendor/gsap/MotionPathPlugin.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
+    <script src="assets/vendor/SplitText/SplitText.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery/dist/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/dist/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="assets/vendor/lightgallery/dist/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="assets/vendor/star-rating/js/star-rating.min.js"></script>
+    <script src="assets/vendor/wow/wow.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/dz.carousel.js"></script>
+    <script src="assets/js/dz.ajax.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/product-data.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/product-details-render.js"></script>
+    <script src="assets/js/notifications.js"></script>
+</body>
+
+</html>

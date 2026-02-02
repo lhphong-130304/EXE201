@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <title>Admin Dashboard - GYMFINDER</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: #1C1E20;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            padding: 40px;
+        }
+
+        .order-card {
+            background: #1C1E20;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .order-card:hover {
+            border-color: #C1FF00;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-pending {
+            background: rgba(255, 193, 7, 0.1);
+            color: #FFC107;
+        }
+
+        .status-confirmed {
+            background: rgba(13, 110, 253, 0.1);
+            color: #0D6EFD;
+        }
+
+        .status-shipping {
+            background: rgba(23, 162, 184, 0.1);
+            color: #17A2B8;
+        }
+
+        .status-completed {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28A745;
+        }
+
+        .status-cancelled {
+            background: rgba(220, 53, 69, 0.1);
+            color: #DC3545;
+        }
+
+        .btn-action {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        select.status-select {
+            background: #25282B;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#141618] text-white">
+    <!-- Sidebar -->
+    <div class="sidebar py-40 px-30">
+        <div class="logo mb-60">
+            <a href="index.html" class="text-white text-3xl font-bold italic tracking-tighter">
+                GYM<span class="text-primary">FINDER</span>
+            </a>
+            <p class="text-white/40 text-xs mt-5">ADMIN PANEL</p>
+        </div>
+
+        <nav class="space-y-10">
+            <a href="#" onclick="switchTab('orders')" id="tab-orders"
+                class="admin-nav-item flex items-center space-x-15 p-15 bg-primary text-black rounded-2xl font-semibold">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Quản lý đơn hàng</span>
+            </a>
+
+            <a href="#" onclick="switchTab('bookings')" id="tab-bookings"
+                class="admin-nav-item flex items-center space-x-15 p-15 text-white/60 hover:bg-white/5 rounded-2xl font-semibold transition-all">
+                <i class="fas fa-calendar-check"></i>
+                <span>Quản lý đặt lịch gym</span>
+            </a>
+
+            <a href="#" onclick="switchTab('pt-bookings')" id="tab-pt-bookings"
+                class="admin-nav-item flex items-center space-x-15 p-15 text-white/60 hover:bg-white/5 rounded-2xl font-semibold transition-all">
+                <i class="fas fa-user-tie"></i>
+                <span>Quản lý thuê PT</span>
+            </a>
+
+            <a href="#" onclick="switchTab('products')" id="tab-products"
+                class="admin-nav-item flex items-center space-x-15 p-15 text-white/60 hover:bg-white/5 rounded-2xl font-semibold transition-all">
+                <i class="fas fa-boxes"></i>
+                <span>Quản lý kho</span>
+            </a>
+
+            <button id="logout-btn-dashboard"
+                class="w-full flex items-center space-x-15 p-15 text-red-500 hover:bg-red-500/10 rounded-2xl transition-all duration-300 mt-auto">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Đăng xuất</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="flex justify-between items-center mb-40">
+            <div>
+                <h1 class="text-3xl font-bold">Danh sách đơn hàng</h1>
+                <p class="text-white/40">Quản lý và cập nhật trạng thái đơn hàng của khách hàng.</p>
+            </div>
+            <div id="admin-info" class="flex items-center space-x-15">
+                <div class="text-right">
+                    <p class="font-semibold" id="admin-name">Admin Name</p>
+                    <p class="text-xs text-primary">Administrator</p>
+                </div>
+                <div
+                    class="w-50 h-50 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+                    <i class="fas fa-user-shield text-primary"></i>
+                </div>
+            </div>
+        </header>
+
+        <div id="orders-section">
+            <h2 class="text-xl font-bold mb-20 text-white/40 uppercase tracking-widest">Danh sách đơn hàng</h2>
+            <div id="orders-container">
+                <!-- Loading state -->
+                <div class="flex items-center justify-center py-100">
+                    <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bookings-section" class="hidden">
+            <h2 class="text-xl font-bold mb-20 text-white/40 uppercase tracking-widest">Danh sách đặt lịch gym</h2>
+            <div id="bookings-container">
+                <!-- Loading state -->
+                <div class="flex items-center justify-center py-100">
+                    <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pt-bookings-section" class="hidden">
+            <h2 class="text-xl font-bold mb-20 text-white/40 uppercase tracking-widest">Danh sách thuê PT</h2>
+            <div id="pt-bookings-container" class="space-y-20">
+                <!-- Loading state -->
+                <div class="flex items-center justify-center py-100">
+                    <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="products-section" class="hidden">
+            <div class="flex justify-between items-center mb-20">
+                <h2 class="text-xl font-bold text-white/40 uppercase tracking-widest">Quản lý kho sản phẩm</h2>
+                <button onclick="openProductModal()"
+                    class="bg-primary text-black px-20 py-10 rounded-xl font-black uppercase italic text-xs tracking-widest hover:bg-white transition-all shadow-lg shadow-primary/20">
+                    <i class="fas fa-plus mr-10"></i> Thêm sản phẩm
+                </button>
+            </div>
+            <div class="bg-[#1C1E20] border border-white/5 rounded-3xl overflow-hidden shadow-2xl">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-white/5">
+                            <th class="p-20 text-xs font-bold uppercase tracking-widest text-white/40 italic">Sản phẩm
+                            </th>
+                            <th
+                                class="p-20 text-xs font-bold uppercase tracking-widest text-white/40 italic text-center">
+                                Giá</th>
+                            <th
+                                class="p-20 text-xs font-bold uppercase tracking-widest text-white/40 italic text-center">
+                                Tồn kho</th>
+                            <th
+                                class="p-20 text-xs font-bold uppercase tracking-widest text-white/40 italic text-center">
+                                Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-container" class="divide-y divide-white/5">
+                        <!-- Products will be rendered here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Detail Modal (Optional) -->
+    <div id="order-modal" class="fixed inset-0 bg-black/80 z-[2000] hidden items-center justify-center p-20">
+        <div class="bg-[#1C1E20] w-full max-w-2xl rounded-3xl p-40 relative">
+            <button onclick="closeOrderModal()" class="absolute top-20 right-20 text-white/40 hover:text-white">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Product Management Modal -->
+    <div id="product-modal"
+        class="fixed inset-0 bg-black/90 z-[3000] hidden items-center justify-center p-20 backdrop-blur-md">
+        <div
+            class="bg-[#1C1E20] w-full max-w-lg rounded-[2.5rem] p-40 relative border border-white/10 shadow-2xl animate-fadeIn">
+            <button onclick="closeProductModal()"
+                class="absolute top-25 right-25 text-white/40 hover:text-primary duration-300">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 id="product-modal-title" class="text-3xl font-black italic mb-30 uppercase tracking-tighter">Thêm sản
+                phẩm mới</h3>
+
+            <form id="product-form" class="space-y-20">
+                <input type="hidden" id="product-id">
+                <div>
+                    <label class="block mb-8 text-[10px] font-black opacity-40 uppercase tracking-widest">Tên sản
+                        phẩm</label>
+                    <input type="text" id="product-name" required
+                        class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 outline-none focus:border-primary duration-300 font-bold">
+                </div>
+                <div class="grid grid-cols-2 gap-20">
+                    <div>
+                        <label class="block mb-8 text-[10px] font-black opacity-40 uppercase tracking-widest">Giá sản
+                            phẩm (VND)</label>
+                        <input type="number" id="product-price" required
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 outline-none focus:border-primary duration-300 font-bold text-primary">
+                    </div>
+                    <div>
+                        <label class="block mb-8 text-[10px] font-black opacity-40 uppercase tracking-widest">Số lượng
+                            tồn kho</label>
+                        <input type="number" id="product-stock" required
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 outline-none focus:border-primary duration-300 font-bold">
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-8 text-[10px] font-black opacity-40 uppercase tracking-widest">Danh
+                        mục</label>
+                    <select id="product-category" required
+                        class="w-full bg-[#25282B] border border-white/10 rounded-2xl px-20 py-15 outline-none focus:border-primary duration-300 font-bold text-white">
+                        <!-- Categories will be loaded here -->
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-8 text-[10px] font-black opacity-40 uppercase tracking-widest">Mô tả sản
+                        phẩm</label>
+                    <textarea id="product-description"
+                        class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 outline-none focus:border-primary duration-300 font-bold h-100 resize-none"></textarea>
+                </div>
+                <div>
+                    <label class="block mb-8 text-[10px] font-black opacity-40 uppercase tracking-widest">Đường dẫn ảnh
+                        (URL hoặc tên file)</label>
+                    <input type="text" id="product-image"
+                        class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 outline-none focus:border-primary duration-300 font-bold"
+                        placeholder="example.jpg">
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary text-black py-20 rounded-2xl font-black uppercase italic tracking-widest shadow-lg shadow-primary/20 hover:bg-white transition-all mt-10">Lưu
+                    sản phẩm</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/admin-dashboard.js"></script>
+</body>
+
+</html>

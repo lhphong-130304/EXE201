@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+
+    <!-- PAGE TITLE HERE -->
+    <title>GYMFINDER - Gym & Fitness Center</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DexignZone">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="keywords"
+        content="GYMFINDER, Gym, Fitness, Workout, Personal Trainer, Responsive Website, SEO, Health, Exercise, Bodybuilding, Fitness Center, Training, Workout Plan">
+    <meta name="description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+
+    <meta property="og:title" content="GYMFINDER - Gym & Fitness Center">
+    <meta property="og:description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+    <meta property="og:image" content="https://gymfinder.dexignzone.com/tailwind/social-image.png">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:title" content="GYMFINDER - Gym & Fitness Center">
+    <meta name="twitter:description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+    <meta name="twitter:image" content="https://gymfinder.dexignzone.com/tailwind/social-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICONS ICON -->
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="selection:bg-primary selection:text-white">
+
+    <div id="loading-area" class="pxl-loader style-2">
+        <div class="loading-spinner">
+            <div class="loading-dot1"></div>
+            <div class="loading-dot2"></div>
+        </div>
+    </div>
+
+    <div class="page-wraper">
+
+        <!-- Header -->
+        <header class="absolute top-0 left-0 w-full z-9999 site-header">
+            <!-- main header -->
+            <div class="main-bar-wraper">
+                <div class="container-fluid">
+                    <div class="flex items-center 2xl:gap-40 gap-20 sm:py-40 py-20">
+                        <div class="logo xl:me-20">
+                            <!-- Logo for Dark Mode -->
+                            <div class="dark:block hidden">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                            <!-- Logo for Light Mode -->
+                            <div class="dark:hidden block">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-1 h-50 dark:bg-white/20 bg-black/20 xl:block hidden"></div>
+                        <div class="header-nav navbar-collapse full-sidenav grow custom-scroll">
+                            <div class="logo xl:hidden xl:mb-0 mb-50">
+                                <div class="dark:block hidden">
+                                    <a href="index.html">
+
+                                    </a>
+                                </div>
+                                <div class="dark:hidden block">
+                                    <a href="index.html">
+
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="nav navbar xl:flex xl:w-auto w-full">
+                                <li class="">
+                                    <a href="index.html"><span>Trang chủ</span></a>
+                                </li>
+                                <li class="">
+                                    <a href="team.html"><span>Đội ngũ</span></a>
+                                </li>
+                                <li class=""><a href="shop-standard.html"><span>Cửa hàng</span></a>
+                                </li>
+                                <li class=""><a href="gym-finder.html"><span>Tìm phòng tập</span></a>
+                                </li>
+                                <li class="xl:hidden border-t border-white/10 mt-10 pt-10">
+                                    <a href="login.html" id="login-btn-mobile"><span>Đăng nhập</span></a>
+                                </li>
+                                <li class="xl:hidden hidden" id="user-info-mobile">
+                                    <div class="flex items-center gap-10">
+                                        <a href="user-dashboard.html" id="user-name-link-mobile"
+                                            class="dark:text-white text-black">
+                                            <span id="user-display-name-mobile">Hi, User!</span>
+                                        </a>
+                                    </div>
+                                    <a href="javascript:void(0)" id="logout-btn-mobile"
+                                        class="mt-5 dark:text-white text-black"><span>Đăng xuất</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex xl:gap-20 gap-10">
+                            <button type="button"
+                                class="size-48 cursor-pointer inline-flex items-center justify-center dark:bg-[#2C2E30] bg-[#F1F1F1] theme-btn">
+                                <span class="dark-theme dark:block hidden">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 2V4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 20V22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M4.93005 4.92999L6.34005 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.66 17.66L19.07 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2 12H4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20 12H22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.34005 17.66L4.93005 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.07 4.92999L17.66 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="light-theme dark:hidden block">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="auth-buttons-desktop" class="flex items-center xl:gap-20 gap-10">
+                                <a href="login.html" id="login-btn" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Đăng nhập</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div id="user-info" class="hidden items-center gap-10 max-xl:hidden">
+                                    <a href="user-dashboard.html" id="user-name-link"
+                                        class="dark:text-white text-black text-sm hover:text-primary transition-all">
+                                        <span id="user-display-name">User</span>
+                                    </a>
+                                    <a href="javascript:void(0)" id="logout-btn"
+                                        class="btn btn-primary max-xl:hidden group">
+                                        <span class="pxl-button-text">Đăng xuất</span>
+                                    </a>
+                                </div>
+                                <a href="shop-cart.html" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Giỏ hàng</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="menu-btn relative xl:hidden flex items-center justify-center size-48">
+                                    <span class="inline-block align-middle space-y-6 toogle-btn">
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main header END -->
+        </header>
+        <!-- Header END -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div class="page-content">
+
+                    <!-- Main Banner -->
+                    <section
+                        class="main-banner overflow-hidden lg:pt-205 sm:pt-160 pt-120 lg:pb-160 sm:pb-80 pb-40 z-0 ">
+                        <div class="container-lg">
+                            <div class="grid grid-cols-12 gap-20">
+                                <div class="lg:col-span-7 col-span-12">
+                                    <div class="2xl:px-100">
+                                        <h2 class="xl:text-7xl/80 md:text-5xl text-4xl sm:mb-40 mb-20 font-medium">
+                                            Đội ngũ Chuyên gia - Dẫn lối Thành công</h2>
+                                        <div class="flex gap-6 mb-40 md:flex-row flex-col">
+                                            <div class="min-w-90">
+                                                <p class="text-lg/28 font-normal dark:text-white text-dark">Huấn luyện
+                                                    viên</p>
+                                            </div>
+                                            <div class="min-w-80 h-1 md:mt-15 dark:bg-white bg-grey"></div>
+                                            <div class="md:ps-40 md:pe-20">
+                                                <p
+                                                    class="sm:text-xl text-lg/28 font-normal dark:text-lightgrey text-textlight">
+                                                    Quy tụ những huấn luyện viên giàu kinh nghiệm, tận tâm và có chứng
+                                                    chỉ quốc tế. Chúng tôi cam kết xây dựng lộ trình cá nhân hóa để bạn
+                                                    chinh phục mọi giới hạn của bản thân.</p>
+                                            </div>
+                                        </div>
+                                        <div class="wow clip-right-animation">
+                                            <img src="assets/images/home/3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 col-span-12">
+                                    <div class="2xxl:ps-40">
+                                        <div class="relative max-2xl:flex max-2xl:flex-col max-2xl:gap-20">
+                                            <div class="flex items-center justify-starDown">
+                                                <img style="width: 300px; height: 350px;"
+                                                    src="assets/images/team/team1.jpg" alt=""
+                                                    class="2xxl:w-auto xl:w-[65%] sm:w-[58%] w-1/2 object-cover">
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-end sm:-mt-180 -mt-90 sm:ms-0 -ms-40Right">
+                                                <img style="width: 300px; height: 350px;"
+                                                    src="assets/images/team/team2.jpg" alt=""
+                                                    class="2xxl:w-auto xl:w-[65%] sm:w-[58%] w-1/2 object-cover">
+                                            </div>
+                                            <div class="flex items-center justify-start -mt-90 relative">
+                                                <img style="width: 300px; height: 350px;"
+                                                    src="assets/images/team/team3.jpg" alt=""
+                                                    class="2xxl:w-auto xl:w-[65%] sm:w-[58%] w-1/2 object-cover">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-primary bg-[url('../images/background/pic1.png')] bg-blend-multiply">
+                        <div class="sm:py-60 py-40">
+                            <div class="container">
+                                <div class="hidden">
+                                    <h2 class="xl:text-6xl md:text-5xl text-4xl">Team</h2>
+                                </div>
+                                <div class="grid grid-cols-12 sm:gap-20 gap-10 content">
+                                    <div class="sm:col-span-4 col-span-12">
+                                        <div class="sm:py-50 py-10 sm:pe-90">
+                                            <div class="sm:mb-30">
+                                                <span
+                                                    class="sm:text-[120px]/[1] text-7xxl text-secondary font-light flex">
+                                                    <span class="value" data-akhi="5"></span>
+                                                    <span>+</span>
+                                                </span>
+                                            </div>
+                                            <hr class="border-t border-secondary sm:my-20 my-10">
+                                            <p class="sm:text-xl text-lg/26 uppercase text-secondary xl:max-w-200">Năm
+                                                Kinh nghiệm</p>
+                                        </div>
+                                    </div>
+                                    <div class="sm:col-span-4 col-span-12">
+                                        <div class="sm:py-50 py-10 sm:pe-90">
+                                            <div class="sm:mb-30">
+                                                <span
+                                                    class="sm:text-[120px]/[1] text-7xxl text-secondary font-light flex">
+                                                    <span class="value" data-akhi="100"></span>
+                                                    <span>+</span>
+                                                </span>
+                                            </div>
+                                            <hr class="border-t border-secondary sm:my-20 my-10">
+                                            <p class="sm:text-xl text-lg/26 uppercase text-secondary xl:max-w-200">
+                                                Học viên Lột xác</p>
+                                        </div>
+                                    </div>
+                                    <div class="sm:col-span-4 col-span-12">
+                                        <div class="sm:py-50 py-10 sm:pe-90">
+                                            <div class="sm:mb-30">
+                                                <span
+                                                    class="sm:text-[120px]/[1] text-7xxl text-secondary font-light flex">
+                                                    <span class="value" data-akhi="100"></span>
+                                                    <span>%</span>
+                                                </span>
+                                            </div>
+                                            <hr class="border-t border-secondary sm:my-20 my-10">
+                                            <p class="sm:text-xl text-lg/26 uppercase text-secondary xl:max-w-200">
+                                                Cam kết Hiệu quả</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class=" overflow-hidden img-zoom">
+                        <div class="container-full">
+                            <div class="hidden">
+                                <h2 class="xl:text-6xl md:text-5xl text-4xl">Services</h2>
+                            </div>
+                            <div class="relative overflow-hidden">
+                                <div class="img-box">
+                                    <img class="object-cover" style="width: 1920px; height: 850px; "
+                                        src="assets/images/home/9.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="">
+                        <div class="xl:py-132 sm:py-80 py-40">
+                            <div class="container">
+                                <div class="flex items-center justify-between sm:mb-80 mb-20">
+                                    <div class="max-w-580 pxl-heading-scroll-effect">
+                                        <h2 class="xl:text-7xl/80 md:text-5xl text-4xl heading-text">
+                                            PT của GYMFINDER
+                                        </h2>
+                                    </div>
+                                    <a href="trainers.html"
+                                        class="lg:size-129 lg:min-w-129 sm:size-100 sm:min-w-100 size-70 min-w-70 sm:p-15 p-8 flex items-center justify-center rounded-full border border-primary lg:text-lg/20 sm:text-base text-xs bg-primary text-black sm:ms-auto magneticBtn">
+                                        <span class="text-center">
+                                            Xem tất cả HLV
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <div class="pxl-team-list">
+                                    <div class="project relative border-b dark:border-white/10 border-black/10 sm:px-30 px-20 group"
+                                        data-name="Tài Nguyễn" data-role="Huấn luyện viên"
+                                        data-image="assets/images/team/hlv/1.png">
+                                        <div
+                                            class="box-item max-w-1320 mx-auto lg:flex justify-between items-center relative sm:py-40 py-20">
+                                            <img src="assets/images/team/hlv/1.png" alt=""
+                                                class="mb-10 sm:hidden mx-auto">
+                                            <div
+                                                class="project-title relative z-4 flex items-baseline gap-10 lg:mb-0 mb-10 sm:justify-start justify-center">
+                                                <h3 class="sm:text-[40px]/70 text-xl font-medium">Tài Nguyễn</h3>
+                                                <span class="post inline-block">/ Huấn luyện viên</span>
+                                            </div>
+                                            <div class="relative z-4 project-categ">
+                                                <a href="#"
+                                                    class="pt-trigger-btn flex items-center gap-5 sm:justify-start justify-center">
+                                                    <span>Xem hồ sơ</span>
+                                                    <svg class="svg-currentcolor" width="21" height="20"
+                                                        viewBox="0 0 21 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.33325 14.1673L14.6666 5.83398" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M6.33325 5.83398H14.6666V14.1673" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div
+                                                class="item-image absolute w-300 h-350 pointer-events-none top-0 left-0 overflow-hidden opacity-0">
+                                                <div class="reveal-image position-relative h-full w-full bg-cover bg-position-center"
+                                                    style="background-image: url('assets/images/team/hlv/1.png')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project relative border-b dark:border-white/10 border-black/10 sm:px-30 px-20 group"
+                                        data-name="Nguyễn Lý Nam" data-role="Huấn luyện viên"
+                                        data-image="assets/images/team/hlv/2.png">
+                                        <div
+                                            class="box-item max-w-1320 mx-auto lg:flex justify-between items-center relative sm:py-40 py-20">
+                                            <img src="assets/images/team/hlv/2.png" alt=""
+                                                class="mb-10 sm:hidden mx-auto">
+                                            <div
+                                                class="project-title relative z-4 flex items-baseline gap-10 lg:mb-0 mb-10 sm:justify-start justify-center">
+                                                <h3 class="sm:text-[40px]/70 text-xl font-medium">Nguyễn Lý Nam</h3>
+                                                <span class="post inline-block">/ Huấn luyện viên</span>
+                                            </div>
+                                            <div class="relative z-4 project-categ">
+                                                <a href="#"
+                                                    class="pt-trigger-btn flex items-center gap-5 sm:justify-start justify-center">
+                                                    <span>Xem hồ sơ</span>
+                                                    <svg class="svg-currentcolor" width="21" height="20"
+                                                        viewBox="0 0 21 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.33325 14.1673L14.6666 5.83398" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M6.33325 5.83398H14.6666V14.1673" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div
+                                                class="item-image absolute w-300 h-350 pointer-events-none top-0 left-0 overflow-hidden opacity-0">
+                                                <div class="reveal-image position-relative h-full w-full bg-cover bg-position-center"
+                                                    style="background-image: url('assets/images/team/hlv/2.png')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project relative border-b dark:border-white/10 border-black/10 sm:px-30 px-20 group"
+                                        data-name="Nguyễn Hoàng Việt" data-role="Huấn luyện viên"
+                                        data-image="assets/images/team/hlv/3.png">
+                                        <div
+                                            class="box-item max-w-1320 mx-auto lg:flex justify-between items-center relative sm:py-40 py-20">
+                                            <img src="assets/images/team/hlv/3.png" alt=""
+                                                class="mb-10 sm:hidden mx-auto">
+                                            <div
+                                                class="project-title relative z-4 flex items-baseline gap-10 lg:mb-0 mb-10 sm:justify-start justify-center">
+                                                <h3 class="sm:text-[40px]/70 text-xl font-medium">Nguyễn Hoàng Việt</h3>
+                                                <span class="post inline-block">/ Huấn luyện viên</span>
+                                            </div>
+                                            <div class="relative z-4 project-categ">
+                                                <a href="#"
+                                                    class="pt-trigger-btn flex items-center gap-5 sm:justify-start justify-center">
+                                                    <span>Xem hồ sơ</span>
+                                                    <svg class="svg-currentcolor" width="21" height="20"
+                                                        viewBox="0 0 21 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.33325 14.1673L14.6666 5.83398" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M6.33325 5.83398H14.6666V14.1673" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div
+                                                class="item-image absolute w-300 h-350 pointer-events-none top-0 left-0 overflow-hidden opacity-0">
+                                                <div class="reveal-image position-relative h-full w-full bg-cover bg-position-center"
+                                                    style="background-image: url('assets/images/team/hlv/3.png')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project relative border-b dark:border-white/10 border-black/10 sm:px-30 px-20 group"
+                                        data-name="Đặng Ngọc" data-role="Huấn luyện viên"
+                                        data-image="assets/images/team/hlv/4.png">
+                                        <div
+                                            class="box-item max-w-1320 mx-auto lg:flex justify-between items-center relative sm:py-40 py-20">
+                                            <img src="assets/images/team/hlv/4.png" alt=""
+                                                class="mb-10 sm:hidden mx-auto">
+                                            <div
+                                                class="project-title relative z-4 flex items-baseline gap-10 lg:mb-0 mb-10 sm:justify-start justify-center">
+                                                <h3 class="sm:text-[40px]/70 text-xl font-medium">Đặng Ngọc</h3>
+                                                <span class="post inline-block">/ Huấn luyện viên</span>
+                                            </div>
+                                            <div class="relative z-4 project-categ">
+                                                <a href="#"
+                                                    class="pt-trigger-btn flex items-center gap-5 sm:justify-start justify-center">
+                                                    <span>Xem hồ sơ</span>
+                                                    <svg class="svg-currentcolor" width="21" height="20"
+                                                        viewBox="0 0 21 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.33325 14.1673L14.6666 5.83398" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M6.33325 5.83398H14.6666V14.1673" stroke-opacity="0.6"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div
+                                                class="item-image absolute w-300 h-350 pointer-events-none top-0 left-0 overflow-hidden opacity-0">
+                                                <div class="reveal-image position-relative h-full w-full bg-cover bg-position-center"
+                                                    style="background-image: url('assets/images/team/hlv/4.png')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section class="bg-primary bg-[url('../images/background/pic1.png')] bg-blend-multiply">
+                        <div class="lg:py-123 sm:py-80 py-50">
+                            <div class="container">
+                                <div class="grid grid-cols-12 gap-20 items-center">
+                                    <div class="lg:col-span-3 col-span-12 lg:mb-0 sm:mb-30 mb-10">
+                                        <div class="xl:pe-72">
+                                            <h3 class="text-2xxl/35 font-medium text-dark">
+                                                Đối tác Dinh dưỡng & Thiết bị Uy tín
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-9 col-span-12">
+                                        <div class="swiper brand-swiper2">
+                                            <div class="swiper-wrapper items-center">
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/awwards2.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/colorlib2.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/envato2.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/fwa2.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/awwards2.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/colorlib2.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/envato2.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/logo/fwa2.png" alt="" class="block">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <!-- footer -->
+                    <footer class="relative overflow-hidden z-2 bg-bodybg">
+                        <!-- Upper Footer -->
+                        <div class="xl:pt-135 sm:pt-100 pt-60">
+                            <div class="container">
+                                <div class="grid grid-cols-12 sm:gap-10 sm:mb-100 mb-30">
+                                    <div class="md:col-span-8 col-span-12">
+                                        <h2
+                                            class="xl:text-[4.2vw]/[4.5vw] sm:text-6xl text-[40px]/50 sm:mb-55 mb-20 font-medium xl:max-w-700 text-white">
+                                            Cùng GYMFINDER chinh phục vóc dáng mơ ước. </h2>
+                                        <div class="grid grid-cols-12 gap-10">
+                                            <div class="xl:col-span-3 sm:col-span-6 col-span-12 sm:mb-0 mb-10">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Liên hệ </h4>
+                                                <ul>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="tel:+12345678910">+1 234 567 8910</a>
+                                                    </li>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="tel:+9876543210">+1 987 654 3210</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="xl:col-span-5 sm:col-span-6 col-span-12 sm:mb-0 mb-10">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Gửi tin nhắn</h4>
+                                                <ul>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="mailto:hello@example.com">hello@example.com</a>
+                                                    </li>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="mailto:info@example.com">info@example.com</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md:col-span-4 col-span-12">
+                                        <div class="grid grid-cols-12">
+                                            <div class="sm:col-span-6 col-span-12 sm:mb-0 mb-10Right">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Dịch vụ</h4>
+                                                <ul>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Gói tập Hội viên</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Thực phẩm Bổ sung</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Lớp học Yoga</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Tư vấn PT</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="sm:col-span-6 col-span-12 sm:mb-0 mb-10Right">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Công ty</h4>
+                                                <ul>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="index.html">Trang chủ</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="team.html">Đội ngũ</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="shop-standard.html">Sản phẩm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-span-12">
+                                                <div class="sm:mt-50 mt-10Right">
+                                                    <h5 class="text-2xl sm:mb-12 text-white">Bản tin</h5>
+                                                    <div class="">
+                                                        <form class="dzSubscribe" action="assets/script/mailchamp.php"
+                                                            method="post">
+                                                            <div class="dzSubscribeMsg"></div>
+                                                            <div class="form-group">
+                                                                <div
+                                                                    class="mb-10 relative flex flex-wrap items-stretch w-full">
+                                                                    <input name="dzEmail" required="required"
+                                                                        type="email"
+                                                                        class="relative w-[1%] flex-auto py-12 pe-40 border-b-2 border-white text-white outline-none"
+                                                                        placeholder="Địa chỉ Email">
+                                                                    <button name="submit" value="Submit" type="submit"
+                                                                        class=" absolute right-0 top-0 p-8 z-9 h-full cursor-pointer">
+                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M18.8583 2.3165L15.7249 16.8748C15.6583 17.1915 15.4499 17.4582 15.1583 17.5998C14.8666 17.7415 14.5333 17.7415 14.2333 17.5998L11.8999 16.4665C11.8999 16.4665 8.91661 18.6248 8.30827 18.9082C8.19161 18.9665 8.14161 18.9582 8.05827 18.9582C7.94161 18.9582 7.81661 18.9248 7.71661 18.8582C7.54161 18.7415 7.43327 18.5498 7.43327 18.3415V13.9165C7.42494 13.8248 7.43327 13.7332 7.48327 13.6415C7.48327 13.6415 7.49161 13.6248 7.49994 13.6165C7.52494 13.5748 7.54994 13.5332 7.58327 13.4915L15.2583 5.0915L5.71661 12.9415C5.64161 13.0165 5.54161 13.0832 5.43327 13.1082C5.25827 13.1582 5.06661 13.1248 4.91661 13.0248L1.70827 11.5748C1.34994 11.3998 1.12494 11.0498 1.10827 10.6498C1.09994 10.2582 1.30827 9.8915 1.65827 9.69984L17.3249 1.17484C17.6916 0.974836 18.1249 1.00817 18.4666 1.25817C18.7999 1.50817 18.9499 1.9165 18.8666 2.3165H18.8583Z"
+                                                                                fill="#E3FF75" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="border-t border-white/30">
+                            </div>
+                        </div>
+                        <!-- Lower Footer -->
+
+                    </footer>
+                    <!-- footer END -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="scrollProgress" title="Cuộn lên"
+        class="fixed z-999 right-20 bottom-20 size-40 rounded-full dark:bg-white dark:text-black bg-bodybg text-white cursor-pointer opacity-0 pointer-events-none duration-500 flex items-center justify-center">
+        <span class="icon text-xs relative z-1"><i class="fa-solid fa-chevron-up"></i></span>
+        <svg class="absolute top-0 left-0 -rotate-90" width="40" height="40">
+            <circle class="dark:stroke-black stroke-white" cx="20" cy="20" r="17" stroke="#000" stroke-width="2"
+                fill="none" stroke-linecap="round" stroke-dasharray="100.53" stroke-dashoffset="100.53"></circle>
+        </svg>
+    </button>
+
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/vendor/gsap/MotionPathPlugin.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
+    <script src="assets/vendor/SplitText/SplitText.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/wow/wow.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/dz.carousel.js"></script>
+    <script src="assets/js/dz.ajax.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!-- PT Detail Modal -->
+    <div id="pt-contact-modal" class="fixed inset-0 z-[99999] hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div
+                class="modal-content relative bg-white dark:bg-[#1A1C1E] w-full max-w-2xl rounded-3xl shadow-2xl transform scale-95 opacity-0 transition-all duration-300 overflow-hidden">
+                <div class="p-40 max-h-[90vh] overflow-y-auto">
+                    <button id="close-pt-modal"
+                        class="absolute top-20 right-20 size-40 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 hover:text-primary transition-colors">
+                        <i class="las la-times text-xl"></i>
+                    </button>
+                    <div class="flex flex-col md:flex-row gap-30 mb-30">
+                        <div
+                            class="w-full md:w-200 h-250 rounded-2xl overflow-hidden border-2 border-primary/20 flex-shrink-0">
+                            <img id="pt-modal-image" src="" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="grow">
+                            <h3 id="pt-modal-name"
+                                class="text-3xl font-black italic uppercase tracking-tight text-dark dark:text-white mb-5">
+                            </h3>
+                            <p id="pt-modal-role"
+                                class="text-primary font-black uppercase tracking-widest text-[10px] mb-15"></p>
+                            <div class="space-y-10 mb-20">
+                                <p class="text-xs font-bold leading-relaxed"><i
+                                        class="fas fa-map-marker-alt text-primary mr-10"></i><span id="pt-modal-address"
+                                        class="opacity-70"></span></p>
+                                <p class="text-xs font-bold"><i class="fas fa-star text-primary mr-10"></i><span
+                                        id="pt-modal-rating" class="opacity-70"></span></p>
+                                <p class="text-xl font-black text-primary italic"><span id="pt-modal-price"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-30 pt-20 border-t border-black/5 dark:border-white/5">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-10 italic">Về huấn
+                            luyện viên</h4>
+                        <p id="pt-modal-bio" class="text-sm opacity-80 leading-loose"></p>
+                    </div>
+                    <div class="mb-30 pt-20 border-t border-black/5 dark:border-white/5">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-15 italic">Chọn lịch
+                            tập</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-20">
+                            <div>
+                                <label
+                                    class="block text-[10px] font-black opacity-30 uppercase tracking-widest mb-5">Ngày
+                                    tập</label>
+                                <input type="date" id="pt-booking-date"
+                                    class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-15 py-10 outline-none focus:border-primary duration-300">
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] font-black opacity-30 uppercase tracking-widest mb-5">Khung
+                                    giờ</label>
+                                <select id="pt-booking-slot"
+                                    class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-15 py-10 outline-none focus:border-primary duration-300 appearance-none">
+                                    <option value="">Chọn ngày trước...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-30 pt-20 border-t border-black/5 dark:border-white/5">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-15 italic">Đánh giá từ
+                            người dùng</h4>
+                        <div id="pt-modal-reviews" class="space-y-15"></div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-15 pt-20 border-t border-black/5 dark:border-white/5">
+                        <button id="pt-modal-hire-btn"
+                            class="btn btn-primary grow justify-center group text-dark font-black italic uppercase tracking-widest text-sm py-15">
+                            <i class="las la-check-circle text-xl mr-10"></i><span>Thuê ngay bây giờ</span>
+                        </button>
+                        <button onclick="document.getElementById('close-pt-modal').click()"
+                            class="btn btn-black grow sm:grow-0 justify-center text-white dark:bg-white/10 dark:hover:bg-white/20 uppercase tracking-widest text-xs py-15 px-30 h-auto">
+                            <span>Để sau</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/team.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

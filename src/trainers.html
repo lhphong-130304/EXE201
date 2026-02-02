@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Danh sách Huấn luyện viên cá nhân - GymFinder">
+    <title>Tất cả Huấn luyện viên - GymFinder</title>
+
+    <!-- FAVICONS ICON -->
+    <link rel="stylesheet" href="assets/vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="selection:bg-primary selection:text-white">
+    <div id="loading-area" class="pxl-loader style-2">
+        <div class="loading-spinner">
+            <div class="loading-dot1"></div>
+            <div class="loading-dot2"></div>
+        </div>
+    </div>
+
+    <div class="page-wraper">
+
+        <!-- Header -->
+        <header class="absolute top-0 left-0 w-full z-9999 site-header">
+            <!-- main header -->
+            <div class="main-bar-wraper">
+                <div class="container-fluid">
+                    <div class="flex items-center 2xl:gap-40 gap-20 sm:py-40 py-20">
+                        <div class="logo xl:me-20">
+                            <!-- Logo for Dark Mode -->
+                            <div class="dark:block hidden">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                            <!-- Logo for Light Mode -->
+                            <div class="dark:hidden block">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-1 h-50 dark:bg-white/20 bg-black/20 xl:block hidden"></div>
+
+
+                        <div class="header-nav navbar-collapse full-sidenav grow custom-scroll">
+                            <div class="logo xl:hidden xl:mb-0 mb-50">
+                                <!-- Mobile Logo for Dark Mode -->
+                                <div class="dark:block hidden">
+                                    <a href="index.html">
+
+                                    </a>
+                                </div>
+                                <!-- Mobile Logo for Light Mode -->
+                                <div class="dark:hidden block">
+                                    <a href="index.html">
+
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="nav navbar xl:flex xl:w-auto w-full">
+                                <li class="">
+                                    <a href="index.html"><span>Trang chủ</span></a>
+                                </li>
+                                <li class="">
+                                    <a href="team.html"><span>Đội ngũ</span></a>
+                                </li>
+                                <li class=""><a href="shop-standard.html"><span>Cửa hàng</span></a>
+                                </li>
+                                <li class=""><a href="gym-finder.html"><span>Tìm phòng tập</span></a>
+                                </li>
+                                <li class="xl:hidden border-t border-white/10 mt-10 pt-10">
+                                    <a href="login.html" id="login-btn-mobile"><span>Đăng nhập</span></a>
+                                </li>
+                                <li class="xl:hidden hidden" id="user-info-mobile">
+                                    <div class="flex items-center gap-10">
+                                        <a href="user-dashboard.html" id="user-name-link-mobile"
+                                            class="dark:text-white text-black">
+                                            <span id="user-display-name-mobile">Hi, User!</span>
+                                        </a>
+                                    </div>
+                                    <a href="javascript:void(0)" id="logout-btn-mobile"
+                                        class="mt-5 dark:text-white text-black"><span>Đăng
+                                            xuất</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex xl:gap-20 gap-10">
+                            <button type="button"
+                                class="size-48 cursor-pointer inline-flex items-center justify-center dark:bg-[#2C2E30] bg-[#F1F1F1] theme-btn">
+                                <span class="dark-theme dark:block hidden">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 2V4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 20V22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M4.93005 4.92999L6.34005 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.66 17.66L19.07 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2 12H4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20 12H22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.34005 17.66L4.93005 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.07 4.92999L17.66 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="light-theme dark:hidden block">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="auth-buttons-desktop" class="flex items-center xl:gap-20 gap-10">
+                                <a href="login.html" id="login-btn" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Đăng nhập</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div id="user-info" class="hidden items-center gap-10 max-xl:hidden">
+                                    <a href="user-dashboard.html" id="user-name-link"
+                                        class="dark:text-white text-black text-sm hover:text-primary transition-all">
+                                        <span id="user-display-name">User</span>
+                                    </a>
+                                    <a href="javascript:void(0)" id="logout-btn"
+                                        class="btn btn-primary max-xl:hidden group">
+                                        <span class="pxl-button-text">Đăng xuất</span>
+                                    </a>
+                                </div>
+                                <a href="shop-cart.html" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Giỏ hàng</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="menu-btn relative xl:hidden flex items-center justify-center size-48">
+                                    <span class="inline-block align-middle space-y-6 toogle-btn">
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main header END -->
+        </header>
+
+        <main class="pt-200 pb-100 dark:bg-bodybg bg-white min-h-screen">
+            <div class="container">
+                <div class="text-center mb-80">
+                    <h1
+                        class="text-6xl font-black italic uppercase italic tracking-tighter mb-20 text-dark dark:text-white">
+                        Tất cả Huấn luyện viên</h1>
+                    <p class="opacity-50 max-w-2xl mx-auto text-lg leading-relaxed">Khám phá đội ngũ chuyên gia hàng
+                        đầu, sẵn sàng đồng hành cùng bạn trên hành trình chinh phục vóc dáng và sức khỏe.</p>
+                </div>
+
+                <div class="pxl-team-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-40">
+                    <!-- PTs will be loaded here by team.js -->
+                    <div class="col-span-full text-center py-60 opacity-50 italic">
+                        <p>Đang tải danh sách huấn luyện viên...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- PT Detail Modal -->
+    <div id="pt-contact-modal" class="fixed inset-0 z-[99999] hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-md"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div
+                class="modal-content relative bg-white dark:bg-[#1A1C1E] w-full max-w-2xl rounded-3xl shadow-2xl transform scale-95 opacity-0 transition-all duration-300 overflow-hidden">
+                <div class="p-40 max-h-[90vh] overflow-y-auto">
+                    <button id="close-pt-modal"
+                        class="absolute top-20 right-20 size-40 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 hover:text-primary transition-colors">
+                        <i class="las la-times text-xl"></i>
+                    </button>
+                    <div class="flex flex-col md:flex-row gap-30 mb-30">
+                        <div
+                            class="w-full md:w-200 h-250 rounded-2xl overflow-hidden border-2 border-primary/20 flex-shrink-0">
+                            <img id="pt-modal-image" src="" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="grow">
+                            <h3 id="pt-modal-name"
+                                class="text-3xl font-black italic uppercase tracking-tight text-dark dark:text-white mb-5">
+                            </h3>
+                            <p id="pt-modal-role"
+                                class="text-primary font-black uppercase tracking-widest text-[10px] mb-15"></p>
+                            <div class="space-y-10 mb-20">
+                                <p class="text-xs font-bold leading-relaxed"><i
+                                        class="fas fa-map-marker-alt text-primary mr-10"></i><span id="pt-modal-address"
+                                        class="opacity-70"></span></p>
+                                <p class="text-xs font-bold"><i class="fas fa-star text-primary mr-10"></i><span
+                                        id="pt-modal-rating" class="opacity-70"></span></p>
+                                <p class="text-xl font-black text-primary italic"><span id="pt-modal-price"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-30 pt-20 border-t border-black/5 dark:border-white/5">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-10 italic">Về huấn
+                            luyện viên</h4>
+                        <p id="pt-modal-bio" class="text-sm opacity-80 leading-loose"></p>
+                    </div>
+                    <div class="mb-30 pt-20 border-t border-black/5 dark:border-white/5">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-15 italic">Chọn lịch
+                            tập</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-20">
+                            <div>
+                                <label
+                                    class="block text-[10px] font-black opacity-30 uppercase tracking-widest mb-5">Ngày
+                                    tập</label>
+                                <input type="date" id="pt-booking-date"
+                                    class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-15 py-10 outline-none focus:border-primary duration-300">
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] font-black opacity-30 uppercase tracking-widest mb-5">Khung
+                                    giờ</label>
+                                <select id="pt-booking-slot"
+                                    class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-15 py-10 outline-none focus:border-primary duration-300 appearance-none">
+                                    <option value="">Chọn ngày trước...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-30 pt-20 border-t border-black/5 dark:border-white/5">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-15 italic">Đánh giá từ
+                            người dùng</h4>
+                        <div id="pt-modal-reviews" class="space-y-15"></div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-15 pt-20 border-t border-black/5 dark:border-white/5">
+                        <button id="pt-modal-hire-btn"
+                            class="btn btn-primary grow justify-center group text-dark font-black italic uppercase tracking-widest text-sm py-15">
+                            <i class="las la-check-circle text-xl mr-10"></i><span>Thuê ngay bây giờ</span>
+                        </button>
+                        <button onclick="document.getElementById('close-pt-modal').click()"
+                            class="btn btn-black grow sm:grow-0 justify-center text-white dark:bg-white/10 dark:hover:bg-white/20 uppercase tracking-widest text-xs py-15 px-30 h-auto">
+                            <span>Để sau</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/team.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

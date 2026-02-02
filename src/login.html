@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <!-- PAGE TITLE HERE -->
+    <title>Đăng nhập - GYMFINDER</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DexignZone">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICONS ICON -->
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="selection:bg-primary selection:text-white dark:bg-bodybg bg-white">
+
+    <div class="page-wraper font-base">
+        <!-- Header -->
+        <header class="absolute top-0 left-0 w-full z-9999 site-header">
+            <div class="main-bar-wraper">
+                <div class="container-fluid">
+                    <div class="flex items-center justify-between sm:py-40 py-20">
+                        <div class="logo">
+                            <a href="index.html" class="text-white text-3xl font-bold italic tracking-tighter">
+                                GYM<span class="text-primary">FINDER</span>
+                            </a>
+                        </div>
+                        <a href="index.html" class="text-white hover:text-primary duration-300">
+                            Trở về Trang chủ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-100 pb-50">
+                <!-- Background decorative elements -->
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none opacity-20">
+                    <div
+                        class="absolute top-0 left-0 w-full h-full bg-[url('assets/images/background/pic2.png')] bg-no-repeat bg-center bg-cover mix-blend-lighten">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="max-w-md mx-auto relative z-10">
+                        <div class="dark:bg-[#1C1E20] bg-white p-40 rounded-5xl border border-white/10 shadow-2xl">
+                            <div class="text-center mb-40">
+                                <h1 class="text-4xl font-bold mb-10">Chào mừng trở lại!</h1>
+                                <p class="text-white/60">Đăng nhập để tiếp tục hành trình tập luyện cùng GYMFINDER.</p>
+                            </div>
+
+                            <form action="index.html" id="loginForm">
+                                <div class="mb-20">
+                                    <label class="block mb-10 text-sm font-medium">Email</label>
+                                    <input type="email"
+                                        class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 text-white outline-none focus:border-primary duration-300"
+                                        placeholder="example@gmail.com" required>
+                                </div>
+                                <div class="mb-30">
+                                    <div class="flex justify-between mb-10">
+                                        <label class="text-sm font-medium">Mật khẩu</label>
+                                        <a href="#" class="text-xs text-primary hover:underline">Quên mật khẩu?</a>
+                                    </div>
+                                    <input type="password"
+                                        class="w-full bg-white/5 border border-white/10 rounded-2xl px-20 py-15 text-white outline-none focus:border-primary duration-300"
+                                        placeholder="••••••••" required>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full btn btn-primary py-15 rounded-2xl flex items-center justify-center group mb-20">
+                                    <span class="pxl-button-text font-bold">Đăng nhập ngay</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+
+                                <div class="text-center">
+                                    <p class="text-white/60">Chưa có tài khoản? <a href="register.html"
+                                            class="text-primary hover:underline">Đăng ký tham gia</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Simple Footer for Login Page -->
+        <footer class="py-30 text-center border-t border-white/5 bg-bodybg relative z-10">
+            <p class="text-white/40 text-sm">© 2026 GYMFINDER. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/vendor/wow/wow.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        new WOW().init();
+
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const email = this.querySelector('input[type="email"]').value;
+            const password = this.querySelector('input[type="password"]').value;
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.pxl-button-text');
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            const originalSubText = btnText.textContent;
+            btnText.textContent = 'Đang xử lý...';
+
+            const result = await Auth.login(email, password);
+
+            if (result.success) {
+                const userRole = result.user.role || result.user.Role;
+                if (userRole === 'ADMIN') {
+                    window.location.href = 'admin-dashboard.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
+            } else {
+                alert(result.message || 'Đăng nhập thất bại.');
+                btnText.textContent = originalSubText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

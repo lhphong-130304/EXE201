@@ -1,0 +1,18 @@
+.tooltip-arrow::before {
+    content: "";
+    position: absolute;
+    background: 0 0;
+    border: 7px solid transparent;
+    z-index: 10;
+    margin-bottom: 0;
+    top: auto;
+    bottom: -14px;
+    transition: 0.3s;
+    left: auto;
+    right: 50%;
+    transform: translateX(50%);
+    border-top-color: #424547;
+}
+.ct:hover .content {
+    @apply opacity-100;
+}

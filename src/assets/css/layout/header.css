@@ -1,0 +1,95 @@
+.full-sidenav {
+    @apply max-xl:fixed max-xl:h-screen max-xl:w-500 max-sm:!w-300 max-xl:left-[-100%] max-xl:top-0 max-xl:opacity-0 max-xl:invisible max-xl:dark:bg-dark max-xl:bg-white max-xl:overflow-y-scroll max-xl:duration-700 xl:p-0 sm:p-40 p-20;
+}
+.full-sidenav.show {
+    @apply max-xl:visible max-xl:opacity-100 max-xl:left-0;
+}
+.menu-btn .toogle-btn span:nth-child(1) {
+    @apply w-25;
+}
+.menu-btn .toogle-btn span:nth-child(2) {
+    @apply w-30;
+}
+.menu-btn .toogle-btn span:nth-child(3) {
+    @apply w-15;
+}
+.menu-btn.open .toogle-btn span:nth-child(1) {
+    @apply w-30 m-0 rotate-45;
+}
+.menu-btn.open .toogle-btn span:nth-child(2) {
+    @apply opacity-0 m-0;
+}
+.menu-btn.open .toogle-btn span:nth-child(3) {
+    @apply w-30 -rotate-45 m-0;
+}
+.menu-btn.open::after {
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    left: 0;
+    position: fixed;
+    right: -20px;
+    top: -63px;
+    transform: scale(100);
+    width: 100%;
+    z-index: -1;
+    transition: all 0.5s;
+    transform-origin: top right;
+    margin: 0 0px 0px 20px;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+.site-header .navbar {
+    @apply dark:text-white text-dark xl:border-0 border-b dark:border-white/20 border-black/20 xl:pb-0 pb-20;
+}
+.header-light.site-header .navbar {
+    @apply dark:lg:text-white lg:text-white dark:text-white text-dark;
+}
+.site-header .navbar {
+    @apply dark:text-white text-dark;
+}
+.site-header .navbar > li > a {
+  @apply xl:px-20 py-10 text-xl font-normal block w-full hover:text-primary;
+}
+.site-header .navbar > li:hover .sub-menu{
+    @apply xl:opacity-100 xl:visible xl:translate-y-0;
+}
+.site-header .navbar .sub-menu{
+    @apply dark:text-white text-secondary xl:absolute xl:top-[calc(100%_+_10px)] xl:left-0 xl:w-230 dark:bg-bodybg bg-white xl:border xl:dark:border-white/20 xl:border-black/20 xl:p-5 xl:opacity-0 xl:invisible duration-500 xl:-translate-y-10 max-xl:max-h-0 max-xl:overflow-hidden;
+}
+.site-header .navbar > .sub-menu-down > .sub-menu > li > a {
+  @apply px-10 py-5 text-base font-normal block w-full hover:text-primary;
+}
+.sub-menu-down ,
+.sub-menu-down a {
+    @apply relative;
+}
+.site-header .navbar .sub-menu-down > a:after{
+    @apply content-['\f107'] absolute top-1/2 -translate-y-1/2 lg:right-0 right-20 font-['Line_Awesome_Free'] font-black text-xs w-8 duration-500;
+}
+.site-header .navbar .sub-menu-down > a.dz-open:after{
+    @apply rotate-180;
+}
+
+.site-header.style-2 .navbar > li > a {
+  @apply xl:hover:text-dark;
+}
+.site-header.style-2 .navbar {
+    @apply xl:text-dark;
+}
+
+.is-fixed:not(.sticky-no) .main-bar-wraper {
+    @apply fixed top-0 left-0 w-full dark:bg-black/50 bg-white/50 backdrop-blur-[10px];
+    animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
+}
+.header-light.is-fixed:not(.sticky-no) .main-bar-wraper {
+    @apply bg-black/50;
+    animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
+}
+.site-header.is-fixed .overlay-navbar {
+    @apply hidden;
+}
+.site-header.is-fixed .main-bar-wraper .container-fluid > div {
+    @apply sm:py-20 py-10;
+}
+body.menu-btn-open {
+    @apply !h-screen overflow-hidden;
+}

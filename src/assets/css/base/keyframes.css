@@ -1,0 +1,146 @@
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(-15px, -15px);
+  }
+
+  75% {
+    transform: translate(-15px, 8px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+@keyframes toTopFromBottom {
+  49% {
+    -webkit-transform: translate(100%, -100%);
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-100%, 100%);
+  }
+
+  51% {
+    opacity: 1;
+  }
+}
+
+@keyframes clipRightIn {
+  0% {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0)
+  }
+
+  to {
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0)
+  }
+}
+
+@keyframes clipLeftIn {
+  0% {
+    -webkit-clip-path: inset(0 0 0 100%);
+    clip-path: inset(0 0 0 100%)
+  }
+
+  to {
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0)
+  }
+}
+
+@keyframes ScaleInOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceShake {
+    0%,100% {
+        transform: translateY(0)rotate(0)
+    }
+
+    25% {
+        transform: translateY(-20px)rotate(-10deg)
+    }
+
+    50% {
+        transform: translateY(0)rotate(10deg)
+    }
+
+    75% {
+        transform: translateY(-10px)rotate(-5deg)
+    }
+}
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes reverse-rotate {
+    100% {
+        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg)
+    }
+}
+
+@keyframes sk-bounce {
+    0%,100% {
+        transform: scale(0);
+        -webkit-transform: scale(0)
+    }
+
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes headerSlideDown {
+  0% {
+    margin-top: -150px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}

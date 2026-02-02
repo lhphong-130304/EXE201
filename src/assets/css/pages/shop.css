@@ -1,0 +1,3 @@
+.product-gallery-swiper .swiper-slide.swiper-slide-thumb-active img {
+    @apply border-black;
+}

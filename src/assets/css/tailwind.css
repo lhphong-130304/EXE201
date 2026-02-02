@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@import "./abstract/variable.css";
+@import "./base/base.css";
+@import "./components/components.css";
+@import "./layout/layout.css";
+@import "./pages/page.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* CUSTOM THEME */
+@theme {
+
+    /* FONT FAMILY */
+    --font-base: "Kanit", "sans-serif";
+
+    /* COLORS */
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    
+    --color-bodybg: var(--bodybg);
+    --color-bodytext: var(--bodytext);
+    --color-card: var(--card);
+    --color-card-light: #424547;
+    
+    --color-title: var(--title);
+    --color-black: #000;
+    --color-heading: #191B1D;
+
+    --color-progress: #070707;
+    --color-social: #191B1D;
+    --color-tickbg: #191B1D;
+    --color-darkbtn: #191B1D;
+    --color-label: #fff;
+    --color-dark: #191B1D;
+    --color-light: #F1F1F1;
+    --color-textlight: #171717b3;
+    --color-bordercolor: #393C3F;
+    
+    --color-lightgrey: #999999;
+    --color-grey: #D9D9D9;
+    --color-red: #F25749;
+    --color-yellow: #FF9B43;
+    --color-green: #0F8B59;
+
+    /* FONTSIZE */
+    --text-2xs: 13px;
+    --text-2xs--line-height: 1;
+    --text-2sm: 15px;
+    --text-2sm--line-height: 19px;
+    --text-2xl: 24px;
+    --text-2xl--line-height: 35px;
+    --text-2xxl: 28px;
+    --text-2xxl--line-height: 34px;
+    --text-4xl: 36px;
+    --text-4xl--line-height: 46px;
+    --text-5xl: 60px;
+    --text-5xl--line-height: 69px;
+    --text-6xl: 65px;
+    --text-6xl--line-height: 1.1;
+    --text-7xl: 70px;
+    --text-7xl--line-height: 85px;
+    --text-7xxl: 80px;
+    --text-7xxl--line-height: 85px;
+    --text-8xl: 100px;
+    --text-8xl--line-height: 110px;
+    --text-9xl: 130px;
+    --text-9xl--line-height: 91px;
+    --text-10xl: 140px;
+    --text-10xl--line-height: 100px;
+    --text-13xl: 150px;
+    --text-13xl--line-height: 160px;
+    --text-14xl: 200px;
+    --text-14xl--line-height: 230px;
+    --text-15xl: 290px;
+    --text-15xl--line-height: 300px;
+
+    /* SPACING */
+    --spacing: 1px;
+
+    /* BREAKPOINTS */
+    --breakpoint-*: initial;
+    --breakpoint-xs: 370px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1440px;
+    --breakpoint-2xxl: 1300px;
+    --breakpoint-3xl: 1680px;
+    --breakpoint-4xl: 1800px;
+    --breakpoint-5xl: 2200px;
+	
+	--max-breakpoint-sm: 575px;
+    --max-breakpoint-md: 768px;
+    --max-breakpoint-lg: 991px;
+    --max-breakpoint-xl: 1024px;
+    --max-breakpoint-2xl: 1200px;
+    --max-breakpoint-3xl: 1400px;
+    --max-breakpoint-5xl: 1800px;
+
+    /* BACKGROUND IMAGE */
+    --background-image-noise: url(../images/noise-overlay.png);
+    --background-image-check: url(../images/svg/check-mark.svg);
+    --background-image-bg8: url(../images/background/bg8.png);
+    
+    /* GRADIENT */
+    --text-row-gradient: rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%;
+    --text-row-gradient-dark: rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%;
+    --divider-gradient: 90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%;
+
+    /* Z-INDEX */
+    --z-index-1: 1;
+    --z-index-2: 2;
+    --z-index-4: 4;
+    --z-index-9: 9;
+    --z-index-99: 99;
+    --z-index-999: 999;
+    --z-index-9999: 9999;
+    --z-index-99999: 99999;
+    --z-index-999999: 999999;
+
+    /*  BORDER RADIUS*/
+    --radius-2lg: 10px;
+    --radius-2xl: 20px;
+    --radius-4xl: 30px;
+    --radius-5xl: 40px;
+
+    /* ANIMATIONS */
+    --animate-move: move 5s infinite linear;
+    --animate-rotate: rotate 20s infinite linear;
+    --animate-anglerotate: anglerotate 20s linear;
+    --animate-ticker: ticker 20s linear infinite 0s normal;
+    --animate-toTopFromBottom: toTopFromBottom 0.8s ease 0s 1 normal forwards running;
+    --animate-ScaleInOut: ScaleInOut 30s linear infinite;
+    --animate-bounceShake: bounceShake 1.5s ease-in-out infinite;
+}
+
+ 

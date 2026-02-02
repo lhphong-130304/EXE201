@@ -1,0 +1,15 @@
+.service-card {
+    @apply relative overflow-hidden lg:w-[37.8%] w-full duration-500;
+}
+.service-card.active {
+    @apply lg:w-[62.2%];
+}
+.service-card.active .service-img::after {
+    @apply opacity-60;
+}
+.service-card.active .content{
+    @apply left-1/2 -translate-x-1/2;
+}
+.service-card.active .service-text{
+    @apply left-[-20%] -translate-x-full;
+}

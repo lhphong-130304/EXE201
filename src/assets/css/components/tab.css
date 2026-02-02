@@ -1,0 +1,20 @@
+.tab-title.tab-underline.active a::after ,
+.tab-title.tab-underline.active button::after {
+    width: 100%;
+}
+.tab-title.tab-underline.active a  {
+    @apply dark:text-white text-dark;
+}
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+.shop-tab .tab-title.active {
+  @apply bg-primary;
+}
+.dark .shop-tab .tab-title.active svg path {
+  @apply fill-dark;
+}

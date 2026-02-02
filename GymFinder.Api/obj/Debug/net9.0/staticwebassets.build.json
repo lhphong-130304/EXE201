@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ROLUlu6dbmh7KyYlamrfgxwwJj3gkaIMSNpSdU+r6eQ=",
+  "Source": "GymFinder.Api",
+  "BasePath": "_content/GymFinder.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

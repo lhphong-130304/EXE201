@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <title>Dashboard - GYMFINDER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="selection:bg-primary selection:text-white bg-white dark:bg-dark text-dark dark:text-white">
+
+    <div class="page-wraper">
+        <!-- Header -->
+        <header class="absolute top-0 left-0 w-full z-9999 site-header">
+            <div class="main-bar-wraper">
+                <div class="container-fluid">
+                    <div class="flex items-center 2xl:gap-40 gap-20 sm:py-40 py-20">
+                        <div class="logo xl:me-20">
+                            <a href="index.html">
+                                <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                            </a>
+                        </div>
+                        <div class="w-1 h-50 dark:bg-white/20 bg-black/20 xl:block hidden"></div>
+                        <div class="header-nav navbar-collapse grow custom-scroll">
+                            <ul class="nav navbar xl:flex xl:w-auto w-full">
+                                <li><a href="index.html"><span>Trang chủ</span></a></li>
+                                <li><a href="team.html"><span>Đội ngũ</span></a></li>
+                                <li><a href="shop-standard.html"><span>Cửa hàng</span></a></li>
+                                <li><a href="gym-finder.html"><span>Tìm phòng tập</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="flex xl:gap-20 gap-10">
+                            <button type="button"
+                                class="size-48 cursor-pointer inline-flex items-center justify-center dark:bg-[#2C2E30] bg-[#F1F1F1] theme-btn">
+                                <span class="dark-theme dark:block hidden">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 2V4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 20V22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M4.93005 4.92999L6.34005 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.66 17.66L19.07 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2 12H4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20 12H22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.34005 17.66L4.93005 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.07 4.92999L17.66 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="light-theme dark:hidden block">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="auth-buttons-desktop" class="flex items-center xl:gap-20 gap-10">
+                                <a href="login.html" id="login-btn" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Đăng nhập</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div id="user-info" class="hidden items-center gap-10 max-xl:hidden">
+                                    <div class="flex items-center gap-10 border-l border-white/10 pl-20 ml-10">
+                                        <a href="user-dashboard.html" id="user-name-link"
+                                            class="dark:text-white text-black text-sm font-bold hover:text-primary transition-all">
+                                            <span id="user-display-name">User</span>
+                                        </a>
+                                    </div>
+                                    <a href="javascript:void(0)" id="logout-btn" onclick="logout()"
+                                        class="btn btn-primary px-15 py-10 !text-[10px] uppercase font-black tracking-widest pxl-button-text">Đăng
+                                        xuất</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-160 pb-80">
+            <div class="container">
+                <div class="grid grid-cols-12 gap-30">
+
+                    <!-- Sidebar -->
+                    <aside class="lg:col-span-3 col-span-12">
+                        <div
+                            class="bg-gray-100 dark:bg-[#1A1C1E] p-40 rounded-[2rem] border border-black/5 dark:border-white/5 shadow-xl">
+                            <div class="text-center mb-40 pb-30 border-b border-black/5 dark:border-white/5">
+                                <h5 id="sidebar-user-name" class="font-bold text-xl mb-5 uppercase">User Name</h5>
+                                <p class="text-[10px] text-primary uppercase font-bold tracking-widest">Thành viên</p>
+                            </div>
+
+                            <ul class="space-y-10">
+                                <li>
+                                    <a href="javascript:void(0)" onclick="switchTab('orders')" id="tab-orders"
+                                        class="flex items-center gap-15 p-15 bg-primary text-black rounded-2xl font-bold uppercase italic text-xs duration-300">
+                                        <i class="fa-solid fa-box text-lg"></i> Đơn hàng của tôi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" onclick="switchTab('profile')" id="tab-profile"
+                                        class="flex items-center gap-15 p-15 text-dark/60 dark:text-white/40 hover:bg-black/5 dark:hover:bg-white/5 rounded-2xl font-bold uppercase italic text-xs duration-300">
+                                        <i class="fa-solid fa-user text-lg"></i> Hồ sơ cá nhân
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" onclick="switchTab('pt-bookings')" id="tab-pt-bookings"
+                                        class="flex items-center gap-15 p-15 text-dark/60 dark:text-white/40 hover:bg-black/5 dark:hover:bg-white/5 rounded-2xl font-bold uppercase italic text-xs duration-300">
+                                        <i class="fa-solid fa-user-tie text-lg"></i> Lịch thuê PT
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" onclick="switchTab('gym-bookings')"
+                                        id="tab-gym-bookings"
+                                        class="flex items-center gap-15 p-15 text-dark/60 dark:text-white/40 hover:bg-black/5 dark:hover:bg-white/5 rounded-2xl font-bold uppercase italic text-xs duration-300">
+                                        <i class="fa-solid fa-calendar-check text-lg"></i> Lịch đặt Gym
+                                    </a>
+                                </li>
+                                <li class="pt-20">
+                                    <a href="javascript:void(0)" onclick="logout()"
+                                        class="flex items-center gap-15 p-15 text-red-500/60 hover:bg-red-500/5 rounded-2xl font-bold uppercase italic text-xs duration-300">
+                                        <i class="fa-solid fa-right-from-bracket text-lg"></i> Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="lg:col-span-9 col-span-12">
+
+                        <!-- Orders Section -->
+                        <div id="orders-section">
+                            <div class="flex justify-between items-center mb-40">
+                                <div>
+                                    <h2 class="text-4xl font-black italic uppercase tracking-tighter">Đơn hàng của tôi
+                                    </h2>
+                                    <p class="opacity-40 text-sm italic">Xem lại lịch sử mua hàng và trạng thái vận
+                                        chuyển.</p>
+                                </div>
+                                <div class="flex gap-10">
+                                    <button
+                                        class="text-[10px] font-black uppercase tracking-widest border border-black/10 dark:border-white/10 px-20 py-10 rounded-full hover:bg-primary hover:text-black hover:border-primary duration-300 italic">Tất
+                                        cả</button>
+                                </div>
+                            </div>
+
+                            <div id="order-list-container" class="space-y-25">
+                                <div class="text-center py-100 opacity-20 italic">
+                                    Đang tải lịch sử mua hàng...
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PT Bookings Section -->
+                        <div id="pt-bookings-section" class="hidden">
+                            <div class="flex justify-between items-center mb-40">
+                                <div>
+                                    <h2 class="text-4xl font-black italic uppercase tracking-tighter">Lịch thuê PT</h2>
+                                    <p class="opacity-40 text-sm italic">Theo dõi trạng thái và quản lý các buổi tập với
+                                        huấn luyện viên.</p>
+                                </div>
+                            </div>
+
+                            <div id="pt-bookings-container" class="space-y-25">
+                                <div class="text-center py-100 opacity-20 italic">
+                                    Đang tải danh sách thuê PT...
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gym Bookings Section -->
+                        <div id="gym-bookings-section" class="hidden">
+                            <div class="flex justify-between items-center mb-40">
+                                <div>
+                                    <h2 class="text-4xl font-black italic uppercase tracking-tighter">Lịch đặt Gym</h2>
+                                    <p class="opacity-40 text-sm italic">Quản lý các buổi tập tại phòng gym đã đặt.</p>
+                                </div>
+                            </div>
+
+                            <div id="gym-bookings-container" class="space-y-25">
+                                <div class="text-center py-100 opacity-20 italic">
+                                    Đang tải danh sách đặt gym...
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Section -->
+                        <div id="profile-section" class="hidden">
+                            <div class="mb-40">
+                                <h2 class="text-4xl font-black italic uppercase tracking-tighter">Hồ sơ cá nhân</h2>
+                                <p class="opacity-40 text-sm italic">Cập nhật thông tin cá nhân để có trải nghiệm tốt
+                                    hơn.</p>
+                            </div>
+
+                            <div
+                                class="bg-gray-100 dark:bg-[#1A1C1E] p-50 rounded-[3rem] border border-black/5 dark:border-white/5 shadow-2xl">
+                                <form id="profile-form" class="space-y-30">
+                                    <div class="grid grid-cols-2 gap-30">
+                                        <div class="col-span-2 sm:col-span-1">
+                                            <label
+                                                class="block text-[10px] font-black opacity-40 uppercase tracking-widest mb-10">Họ
+                                                và tên</label>
+                                            <input type="text" id="profile-fullname" required
+                                                class="w-full bg-white dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-2xl px-25 py-15 outline-none focus:border-primary duration-300 font-medium">
+                                        </div>
+                                        <div class="col-span-2 sm:col-span-1">
+                                            <label
+                                                class="block text-[10px] font-black opacity-40 uppercase tracking-widest mb-10">Địa
+                                                chỉ Email</label>
+                                            <input type="email" id="profile-email" required
+                                                class="w-full bg-black/5 dark:bg-black/40 border border-black/10 dark:border-white/10 rounded-2xl px-25 py-15 opacity-50 outline-none font-medium"
+                                                readonly title="Email không thể thay đổi">
+                                        </div>
+                                        <div class="col-span-2 sm:col-span-1">
+                                            <label
+                                                class="block text-[10px] font-black opacity-40 uppercase tracking-widest mb-10">Số
+                                                điện thoại</label>
+                                            <input type="text" id="profile-phone" placeholder="0912345678"
+                                                class="w-full bg-white dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-2xl px-25 py-15 outline-none focus:border-primary duration-300 font-medium">
+                                        </div>
+                                        <div class="col-span-2 sm:col-span-1">
+                                            <label
+                                                class="block text-[10px] font-black opacity-40 uppercase tracking-widest mb-10">Giới
+                                                tính</label>
+                                            <select id="profile-gender"
+                                                class="w-full bg-white dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-2xl px-25 py-15 outline-none focus:border-primary duration-300 font-medium appearance-none">
+                                                <option value="">Chọn giới tính</option>
+                                                <option value="Nam">Nam</option>
+                                                <option value="Nữ">Nữ</option>
+                                                <option value="Khác">Khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="pt-20 border-t border-black/5 dark:border-white/5 flex gap-20">
+                                        <button type="submit" id="save-profile-btn"
+                                            class="flex-1 text-sm font-black text-black bg-primary py-20 rounded-2xl hover:bg-white dark:hover:bg-white transition-all shadow-lg shadow-primary/20 uppercase tracking-widest italic">
+                                            Lưu thay đổi
+                                        </button>
+                                        <button type="button" onclick="switchTab('orders')"
+                                            class="px-40 text-sm font-black opacity-40 hover:opacity-100 py-20 rounded-2xl transition-all uppercase tracking-widest">
+                                            Hủy
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="review-modal"
+        class="fixed inset-0 bg-black/80 z-[9999] hidden items-center justify-center p-20 backdrop-blur-md">
+        <div
+            class="bg-white dark:bg-[#1A1C1E] w-full max-w-md rounded-[2.5rem] p-40 relative border border-white/10 shadow-2xl">
+            <button onclick="closeReviewModal()"
+                class="absolute top-25 right-25 text-white/40 hover:text-primary duration-300">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h3 class="text-3xl font-black italic mb-25 uppercase tracking-tighter">Đánh giá sản phẩm</h3>
+
+            <div id="review-product-info"
+                class="mb-30 flex items-center gap-20 p-15 bg-black/5 dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5">
+                <!-- Product info will be injected here -->
+            </div>
+
+            <form id="review-form" class="space-y-25">
+                <input type="hidden" id="review-product-id">
+                <input type="hidden" id="review-type" value="product">
+                <div>
+                    <label class="block mb-10 text-[10px] font-black opacity-40 uppercase tracking-widest">Số sao đánh
+                        giá</label>
+                    <div class="flex gap-15 text-3xl text-yellow-500" id="star-rating">
+                        <i class="far fa-star cursor-pointer hover:scale-110 duration-200" data-rating="1"></i>
+                        <i class="far fa-star cursor-pointer hover:scale-110 duration-200" data-rating="2"></i>
+                        <i class="far fa-star cursor-pointer hover:scale-110 duration-200" data-rating="3"></i>
+                        <i class="far fa-star cursor-pointer hover:scale-110 duration-200" data-rating="4"></i>
+                        <i class="far fa-star cursor-pointer hover:scale-110 duration-200" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" id="review-rating" value="5">
+                </div>
+                <div>
+                    <label class="block mb-10 text-[10px] font-black opacity-40 uppercase tracking-widest">Nhận xét của
+                        bạn</label>
+                    <textarea id="review-comment"
+                        class="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-20 py-15 outline-none focus:border-primary duration-300 min-h-[120px] font-medium"
+                        placeholder="Chia sẻ trải nghiệm của bạn..."></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary text-black py-20 rounded-2xl font-black uppercase italic tracking-widest shadow-lg shadow-primary/20 hover:bg-white transition-all">Gửi
+                    đánh giá ngay</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/user-dashboard.js"></script>
+</body>
+
+</html>

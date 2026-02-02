@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+
+    <!-- PAGE TITLE HERE -->
+    <title>GYMFINDER - Gym & Fitness Center</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DexignZone">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="keywords"
+        content="GYMFINDER, Gym, Fitness, Workout, Personal Trainer, Responsive Website, SEO, Health, Exercise, Bodybuilding, Fitness Center, Training, Workout Plan">
+    <meta name="description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+
+    <meta property="og:title" content="GYMFINDER - Gym & Fitness Center">
+    <meta property="og:description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+    <meta property="og:image" content="https://gymfinder.dexignzone.com/tailwind/social-image.png">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:title" content="GYMFINDER - Gym & Fitness Center">
+    <meta name="twitter:description"
+        content="GYMFINDER is a modern website designed for gyms and fitness centers, offering responsive layouts, sleek UI components, and powerful SEO-ready features.">
+    <meta name="twitter:image" content="https://gymfinder.dexignzone.com/tailwind/social-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="selection:bg-primary selection:text-white">
+
+    <div id="loading-area" class="pxl-loader style-2">
+        <div class="loading-spinner">
+            <div class="loading-dot1"></div>
+            <div class="loading-dot2"></div>
+        </div>
+    </div>
+
+    <div class="page-wraper">
+
+        <!-- Header -->
+        <header class="absolute top-0 left-0 w-full z-9999 site-header light-header">
+            <!-- main header -->
+            <div class="main-bar-wraper">
+                <div class="container-fluid">
+                    <div class="flex items-center 2xl:gap-40 gap-20 sm:py-40 py-20">
+                        <div class="logo xl:me-20">
+                            <!-- Logo for Dark Mode -->
+                            <div class="dark:block hidden">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                            <!-- Logo for Light Mode -->
+                            <div class="dark:hidden block">
+                                <a href="index.html">
+                                    <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-1 h-50 dark:bg-white/20 bg-black/20 xl:block hidden"></div>
+                        <div class="header-nav navbar-collapse full-sidenav grow custom-scroll">
+                            <div class="logo xl:hidden xl:mb-0 mb-50">
+                                <!-- Mobile Logo for Dark Mode -->
+                                <div class="dark:block hidden">
+                                    <a href="index.html">
+                                        <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+                                    </a>
+                                </div>
+                                <!-- Mobile Logo for Light Mode -->
+                                <div class="dark:hidden block">
+                                    <a href="index.html">
+                                        <img src="assets/images/brand/logo.png" alt="" width="185" height="40">
+
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="nav navbar xl:flex xl:w-auto w-full">
+                                <li class="">
+                                    <a href="index.html"><span>Trang chủ</span></a>
+                                </li>
+                                <li class="">
+                                    <a href="team.html"><span>Đội ngũ</span></a>
+                                </li>
+                                <li class=""><a href="shop-standard.html"><span>Cửa hàng</span></a>
+                                </li>
+                                <li class=""><a href="gym-finder.html"><span>Tìm phòng tập</span></a>
+                                </li>
+                                <li class="xl:hidden hidden" id="user-info-mobile">
+                                    <div class="flex items-center gap-10">
+                                        <a href="user-dashboard.html"><span>Hi, User!</span></a>
+                                    </div>
+                                    <a href="javascript:void(0)" id="logout-btn-mobile" class="mt-5"><span>Đăng
+                                            xuất</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex xl:gap-20 gap-10">
+                            <button type="button"
+                                class="size-48 cursor-pointer inline-flex items-center justify-center dark:bg-[#2C2E30] bg-[#F1F1F1] theme-btn">
+                                <span class="dark-theme dark:block hidden">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 2V4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 20V22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M4.93005 4.92999L6.34005 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.66 17.66L19.07 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2 12H4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20 12H22" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6.34005 17.66L4.93005 19.07" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.07 4.92999L17.66 6.33999" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="light-theme dark:hidden block">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 3C10.8065 4.19347 10.136 5.81217 10.136 7.5C10.136 9.18783 10.8065 10.8065 12 12C13.1935 13.1935 14.8122 13.864 16.5 13.864C18.1878 13.864 19.8065 13.1935 21 12C21 13.78 20.4722 15.5201 19.4832 17.0001C18.4943 18.4802 17.0887 19.6337 15.4442 20.3149C13.7996 20.9961 11.99 21.1743 10.2442 20.8271C8.49836 20.4798 6.89472 19.6226 5.63604 18.364C4.37737 17.1053 3.5202 15.5016 3.17294 13.7558C2.82567 12.01 3.0039 10.2004 3.68509 8.55585C4.36628 6.91131 5.51983 5.50571 6.99987 4.51677C8.47991 3.52784 10.22 3 12 3Z"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div id="auth-buttons-desktop" class="flex items-center xl:gap-20 gap-10">
+                                <a href="login.html" id="login-btn" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Đăng nhập</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div id="user-info" class="hidden items-center gap-10 max-xl:hidden">
+                                    <a href="user-dashboard.html" id="user-name-link"
+                                        class="text-white text-sm hover:text-primary transition-all">
+                                        <span id="user-display-name">User</span>
+                                    </a>
+                                    <a href="javascript:void(0)" id="logout-btn"
+                                        class="btn btn-primary max-xl:hidden group">
+                                        <span class="pxl-button-text">Đăng xuất</span>
+                                    </a>
+                                </div>
+                                <a href="shop-cart.html" class="btn btn-primary max-xl:hidden group">
+                                    <span class="pxl-button-text">Giỏ hàng</span>
+                                    <span class="block ms-5 overflow-hidden">
+                                        <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="black" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="menu-btn relative xl:hidden flex items-center justify-center size-48">
+                                    <span class="inline-block align-middle space-y-6 toogle-btn">
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                        <span class="dark:bg-white bg-black block h-1 duration-500"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main header END -->
+        </header>
+        <!-- Header END -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div class="page-content">
+                    <div
+                        class="dark:bg-bodybg z-1 relative after:content-[''] after:absolute after:top-0 after:left-0 after:size-full after:bg-no-repeat after:pointer-events-none after:-z-1 after:bg-center after:bg-[url('../images/background/bg3.png')]">
+                        <div class="container table">
+                            <div class="h-210 align-middle table-cell pt-130 md:pb-130 pb-100 align-center text-center">
+                                <h1 class="md:text-7xl sm:text-6xl text-[48px]/65 text-white">Giỏ hàng</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section>
+                        <div class="sm:pt-90 sm:pb-100 py-60">
+                            <div class="container">
+                                <div class="grid grid-cols-12 md:gap-40 gap-20">
+                                    <div class="lg:col-span-8 col-span-12">
+                                        <div class="overflow-x-auto custom-scroll">
+                                            <table class="w-full text-left">
+                                                <thead>
+                                                    <tr>
+                                                        <th
+                                                            class="pb-20 dark:text-white text-dark font-semibold border-b border-black/20 dark:border-white/20">
+                                                            Sản phẩm</th>
+                                                        <th
+                                                            class="pb-20 dark:text-white text-dark font-semibold border-b border-black/20 dark:border-white/20">
+                                                        </th>
+                                                        <th
+                                                            class="pb-20 dark:text-white text-dark font-semibold border-b border-black/20 dark:border-white/20">
+                                                            Giá</th>
+                                                        <th
+                                                            class="pb-20 dark:text-white text-dark font-semibold border-b border-black/20 dark:border-white/20">
+                                                            Số lượng</th>
+                                                        <th
+                                                            class="pb-20 dark:text-white text-dark font-semibold border-b border-black/20 dark:border-white/20">
+                                                            Tạm tính</th>
+                                                        <th
+                                                            class="pb-20 dark:text-white text-dark font-semibold border-b border-black/20 dark:border-white/20">
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="font-medium cart-table-body">
+                                                    <!-- Cart items will be rendered here by JS -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row !mt-40">
+                                            <div class="md:w-1/2 w-full">
+                                                <!-- Discount code removed -->
+                                            </div>
+                                            <div class="md:w-1/2 text-right md:!mt-0 !mt-20">
+                                                <a href="shop-cart.html" class="btn btn-black font-normal py-10 group">
+                                                    <span class="pxl-button-text">CẬP NHẬT GIỎ HÀNG</span>
+                                                    <span class="block ms-5 overflow-hidden">
+                                                        <svg class="group-hover:animate-toTopFromBottom" width="20"
+                                                            height="20" viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M5.83337 14.1667L14.1667 5.83334" stroke="white"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"></path>
+                                                            <path d="M5.83337 5.83334H14.1667V14.1667" stroke="white"
+                                                                stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-4 col-span-12">
+                                        <div class="my-sticky space-top-0">
+                                            <h4 class="text-xl mb-8">Tổng giỏ hàng</h4>
+                                            <div class="sm:py-35 sm:px-30 p-20 dark:bg-black bg-dark">
+                                                <a href="javascript:void(0);"
+                                                    class="btn btn-outline border-white text-white w-full justify-center mb-20">Gym
+                                                    Finder</a>
+                                                <div class="flex items-center gap-12 py-20 px-26 bg-white mb-15">
+                                                    <div class="h-50 min-w-50 flex items-center justify-center">
+                                                        <svg width="45" height="46" viewBox="0 0 45 46" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.8917 37.6455C12.8015 37.6455 12.7125 37.6255 12.631 37.5869C12.5494 37.5483 12.4775 37.4921 12.4205 37.4223C8.9962 33.2379 5.70451 25.5204 6.0414 18.8671C6.04727 18.7501 6.08677 18.6374 6.15516 18.5423C6.22355 18.4473 6.31792 18.374 6.42694 18.3313L22.2785 12.1286C22.4208 12.073 22.5789 12.073 22.7212 12.1286L38.5727 18.3313C38.6818 18.374 38.7761 18.4473 38.8445 18.5423C38.9129 18.6374 38.9524 18.7501 38.9583 18.8671C39.2952 25.5253 35.9998 33.2415 32.5732 37.4229C32.5225 37.4846 32.4602 37.5358 32.3897 37.5734C32.3193 37.611 32.2421 37.6344 32.1626 37.6423C32.0832 37.6501 32.0029 37.6422 31.9265 37.619C31.8501 37.5958 31.779 37.5578 31.7172 37.5071C31.6555 37.4564 31.6044 37.3941 31.5667 37.3237C31.5291 37.2532 31.5057 37.1761 31.4979 37.0966C31.49 37.0171 31.498 36.9369 31.5211 36.8605C31.5443 36.784 31.5823 36.7129 31.633 36.6512C34.7678 32.8292 37.9318 25.5228 37.7621 19.3201L22.4998 13.3479L7.24059 19.3189C7.07093 25.5161 10.2313 32.8262 13.363 36.65C13.436 36.739 13.4822 36.847 13.4963 36.9613C13.5104 37.0756 13.4917 37.1915 13.4425 37.2956C13.3932 37.3997 13.3154 37.4876 13.2181 37.5492C13.1209 37.6109 13.0081 37.6436 12.893 37.6436L12.8917 37.6455Z"
+                                                                fill="#ABABAB" />
+                                                            <path
+                                                                d="M37.9172 24.7914C37.8419 24.7913 37.7673 24.7773 37.6971 24.75L22.4999 18.8617L7.30262 24.75C7.22815 24.7789 7.14873 24.7928 7.06888 24.791C6.98904 24.7891 6.91033 24.7716 6.83726 24.7394C6.76419 24.7071 6.69819 24.6608 6.64302 24.6031C6.58785 24.5453 6.5446 24.4772 6.51573 24.4028C6.48686 24.3283 6.47294 24.2489 6.47477 24.169C6.47659 24.0892 6.49413 24.0105 6.52637 23.9374C6.55862 23.8644 6.60494 23.7983 6.66269 23.7432C6.72044 23.688 6.78849 23.6448 6.86296 23.6159L22.2803 17.6406C22.4216 17.5859 22.5781 17.5859 22.7194 17.6406L38.1367 23.6159C38.2693 23.667 38.3797 23.7629 38.4489 23.8869C38.5181 24.0109 38.5418 24.1553 38.5157 24.2949C38.4896 24.4345 38.4155 24.5606 38.3062 24.6513C38.1969 24.742 38.0592 24.7915 37.9172 24.7914Z"
+                                                                fill="#ABABAB" />
+                                                            <path
+                                                                d="M36.2815 38.6795C35.0079 38.7104 33.745 38.4406 32.5952 37.892C31.5956 37.411 30.4958 37.1748 29.3868 37.2031C28.2788 37.1748 27.18 37.411 26.1815 37.892C25.0321 38.4406 23.7695 38.7104 22.4963 38.6795C21.2229 38.7104 19.9602 38.4406 18.8106 37.892C17.8116 37.411 16.7124 37.1748 15.604 37.2031C14.496 37.1747 13.3972 37.4109 12.3987 37.892C11.2495 38.4405 9.98716 38.7103 8.71416 38.6795C7.44112 38.7108 6.17869 38.4409 5.02963 37.892C4.03129 37.4111 2.93271 37.1749 1.8249 37.2031C1.66362 37.2031 1.50895 37.139 1.39491 37.0249C1.28087 36.9109 1.2168 36.7562 1.2168 36.595C1.2168 36.4337 1.28087 36.279 1.39491 36.165C1.50895 36.0509 1.66362 35.9868 1.8249 35.9868C3.09797 35.9569 4.36013 36.2278 5.50882 36.7774C6.50721 37.2582 7.60576 37.4944 8.71355 37.4664C9.82199 37.4935 10.9209 37.2562 11.9195 36.7743C13.0684 36.2247 14.3308 35.9538 15.604 35.9838C16.8777 35.9539 18.1404 36.2247 19.2898 36.7743C20.2888 37.2551 21.3879 37.4913 22.4963 37.4633C23.6045 37.4913 24.7034 37.2552 25.7023 36.7743C26.8512 36.2247 28.1135 35.9538 29.3868 35.9838C30.6605 35.9531 31.9236 36.2227 33.0738 36.7707C34.0822 37.225 35.1757 37.46 36.2818 37.46C37.3879 37.46 38.4814 37.225 39.4899 36.7707C40.64 36.2234 41.903 35.9549 43.1763 35.9868C43.3375 35.9868 43.4922 36.0509 43.6063 36.165C43.7203 36.279 43.7844 36.4337 43.7844 36.595C43.7844 36.7562 43.7203 36.9109 43.6063 37.0249C43.4922 37.139 43.3375 37.2031 43.1763 37.2031C42.0673 37.1748 40.9675 37.411 39.9679 37.892C38.8181 38.4406 37.5551 38.7104 36.2815 38.6795Z"
+                                                                fill="#ABABAB" />
+                                                            <path
+                                                                d="M36.2815 43.8484C35.0075 43.8784 33.7443 43.6076 32.5946 43.0579C31.595 42.5768 30.4952 42.3407 29.3862 42.3689C28.2782 42.3407 27.1794 42.5769 26.1808 43.0579C25.0317 43.6075 23.7692 43.8783 22.4957 43.8484C21.2221 43.8783 19.9593 43.6075 18.81 43.0579C17.811 42.5768 16.7118 42.3406 15.6034 42.3689C14.4954 42.3406 13.3966 42.5768 12.3981 43.0579C11.2491 43.6074 9.9868 43.8782 8.71355 43.8484C7.44047 43.8786 6.17825 43.6078 5.02963 43.0579C4.03103 42.578 2.93247 42.3428 1.8249 42.3719C1.66362 42.3719 1.50895 42.3079 1.39491 42.1938C1.28087 42.0798 1.2168 41.9251 1.2168 41.7638C1.2168 41.6026 1.28087 41.4479 1.39491 41.3338C1.50895 41.2198 1.66362 41.1557 1.8249 41.1557C3.09772 41.1249 4.35987 41.3947 5.50882 41.9432C6.50721 42.4241 7.60576 42.6603 8.71355 42.6322C9.82174 42.6603 10.9207 42.4241 11.9195 41.9432C13.0686 41.3946 14.331 41.1248 15.604 41.1557C16.8774 41.1248 18.1402 41.3946 19.2898 41.9432C20.2888 42.424 21.3879 42.6602 22.4963 42.6322C23.6045 42.6602 24.7034 42.424 25.7023 41.9432C26.8514 41.3946 28.1138 41.1248 29.3868 41.1557C30.6605 41.125 31.9236 41.3946 33.0738 41.9426C34.0822 42.397 35.1757 42.6319 36.2818 42.6319C37.3879 42.6319 38.4814 42.397 39.4899 41.9426C40.6398 41.3943 41.9027 41.1247 43.1763 41.1557C43.3375 41.1557 43.4922 41.2198 43.6063 41.3338C43.7203 41.4479 43.7844 41.6026 43.7844 41.7638C43.7844 41.9251 43.7203 42.0798 43.6063 42.1938C43.4922 42.3079 43.3375 42.3719 43.1763 42.3719C42.0673 42.3437 40.9675 42.5799 39.9679 43.0609C38.8181 43.6095 37.5551 43.8793 36.2815 43.8484Z"
+                                                                fill="#ABABAB" />
+                                                            <path
+                                                                d="M22.5007 38.6789C22.3394 38.6789 22.1847 38.6148 22.0707 38.5008C21.9566 38.3867 21.8926 38.232 21.8926 38.0708V12.695C21.8926 12.5337 21.9566 12.3791 22.0707 12.265C22.1847 12.151 22.3394 12.0869 22.5007 12.0869C22.662 12.0869 22.8166 12.151 22.9307 12.265C23.0447 12.3791 23.1088 12.5337 23.1088 12.695V38.0708C23.1088 38.232 23.0447 38.3867 22.9307 38.5008C22.8166 38.6148 22.662 38.6789 22.5007 38.6789Z"
+                                                                fill="#ABABAB" />
+                                                            <path
+                                                                d="M32.1041 17.0582C31.9429 17.0582 31.7882 16.9942 31.6741 16.8801C31.5601 16.7661 31.496 16.6114 31.496 16.4501V9.65876C31.4959 9.46877 31.4204 9.28659 31.2861 9.15219C31.1518 9.01778 30.9697 8.94212 30.7797 8.9418H14.2197C14.0297 8.94212 13.8476 9.01778 13.7133 9.15219C13.579 9.28659 13.5035 9.46877 13.5033 9.65876V16.4501C13.5033 16.6114 13.4393 16.7661 13.3252 16.8801C13.2112 16.9942 13.0565 17.0582 12.8952 17.0582C12.7339 17.0582 12.5793 16.9942 12.4652 16.8801C12.3512 16.7661 12.2871 16.6114 12.2871 16.4501V9.65876C12.2876 9.1463 12.4913 8.65497 12.8536 8.29255C13.2159 7.93013 13.7072 7.72623 14.2197 7.72559H30.7797C31.2921 7.72623 31.7834 7.93013 32.1457 8.29255C32.508 8.65497 32.7118 9.1463 32.7122 9.65876V16.4501C32.7122 16.6114 32.6482 16.7661 32.5341 16.8801C32.4201 16.9942 32.2654 17.0582 32.1041 17.0582Z"
+                                                                fill="#ABABAB" />
+                                                            <path
+                                                                d="M24.6935 8.94209H20.3054C20.1441 8.94209 19.9894 8.87803 19.8754 8.76398C19.7613 8.64994 19.6973 8.49527 19.6973 8.33399V3.11885C19.6973 2.95757 19.7613 2.8029 19.8754 2.68885C19.9894 2.57481 20.1441 2.51074 20.3054 2.51074H24.6935C24.8548 2.51074 25.0094 2.57481 25.1235 2.68885C25.2375 2.8029 25.3016 2.95757 25.3016 3.11885V8.33399C25.3016 8.49527 25.2375 8.64994 25.1235 8.76398C25.0094 8.87803 24.8548 8.94209 24.6935 8.94209ZM20.9135 7.72588H24.0854V3.72696H20.9135V7.72588Z"
+                                                                fill="#ABABAB" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-dark text-2xs">MIỄN PHÍ</span>
+                                                        <h6 class="dark:text-lightgrey text-bodytext">Vận chuyển</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center gap-20 py-20 px-26 bg-white mb-37">
+                                                    <div class="h-50 min-w-50 flex items-center justify-center">
+                                                        <svg width="51" height="51" viewBox="0 0 51 51" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M48.5831 37.9917C48.6248 39.5542 48.2081 41.0334 47.4581 42.3042C47.0414 43.0542 46.479 43.7418 45.854 44.3043C44.4165 45.6376 42.5206 46.4501 40.4164 46.5126C37.3748 46.5751 34.6873 45.0126 33.2081 42.6168C32.4164 41.3876 31.9373 39.9085 31.9165 38.346C31.854 35.721 33.0206 33.3459 34.8956 31.7834C36.3123 30.6167 38.104 29.8876 40.0623 29.8459C44.6665 29.7418 48.479 33.3875 48.5831 37.9917Z"
+                                                                stroke="#ABABAB" stroke-width="1.5"
+                                                                stroke-miterlimit="10" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path d="M37 38.2417L39.1042 40.2416L43.4583 36.0332"
+                                                                stroke="#ABABAB" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M7.26953 16.1797L25.6653 26.8255L43.9361 16.2421"
+                                                                stroke="#ABABAB" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M25.666 45.7005V26.8047" stroke="#ABABAB"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path
+                                                                d="M45.6861 19.7842V31.5759C45.6861 31.6801 45.6862 31.7633 45.6653 31.8675C44.207 30.5967 42.332 29.8467 40.2487 29.8467C38.2903 29.8467 36.4778 30.5342 35.0403 31.6801C33.1237 33.2009 31.9153 35.5551 31.9153 38.1801C31.9153 39.7426 32.3528 41.2217 33.1236 42.4717C33.3111 42.805 33.5403 43.1176 33.7903 43.4092L29.9778 45.5134C27.6028 46.8468 23.7278 46.8468 21.3528 45.5134L10.2278 39.3467C7.70699 37.9509 5.64453 34.4509 5.64453 31.5759V19.7842C5.64453 16.9092 7.70699 13.4092 10.2278 12.0134L21.3528 5.84668C23.7278 4.51335 27.6028 4.51335 29.9778 5.84668L41.1028 12.0134C43.6237 13.4092 45.6861 16.9092 45.6861 19.7842Z"
+                                                                stroke="#ABABAB" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="text-dark">Sản phẩm chất lượng</h6>
+                                                        <p class="text-sm dark:text-lightgrey text-bodytext">Sản phẩm
+                                                            fitness cao cấp cho hiệu quả tập luyện tối đa.</p>
+                                                    </div>
+                                                </div>
+
+                                                <table class="w-full">
+                                                    <tbody>
+                                                        <tr class="total">
+                                                            <td class="xl:py-20 py-10">
+                                                                <h6 class="text-white">Tổng cộng</h6>
+                                                            </td>
+                                                            <td
+                                                                class="xl:py-20 py-10 text-white xl:text-2xl text-xl font-medium text-right">
+                                                                $125.75
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a href="javascript:void(0);" id="placeOrderBtn"
+                                                    class="btn btn-primary w-full justify-center">
+                                                    <span class="pxl-button-text">ĐẶT HÀNG</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-primary bg-[url('../images/background/pic1.png')] bg-blend-multiply">
+                        <div class="lg:py-123 sm:py-80 py-50">
+                            <div class="container">
+                                <div class="grid grid-cols-12 gap-20 items-center">
+                                    <div class="lg:col-span-3 col-span-12 lg:mb-0 sm:mb-30 mb-10">
+                                        <div class="xl:pe-72">
+                                            <h3 class="text-2xxl/35 font-medium text-dark">
+                                                Đồng hành cùng cộng đồng Fitness trong 20 năm qua
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-9 col-span-12">
+                                        <div class="swiper brand-swiper2">
+                                            <div class="swiper-wrapper items-center">
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/big_muscles.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/labrada.png" alt="" class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/body_fortress.avif" alt=""
+                                                        class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/Optimum_Nutrition_Logo.png" alt=""
+                                                        class="block">
+                                                </div>
+                                                <div class="swiper-slide lg:text-end">
+                                                    <img src="assets/images/brand/myprotein-logo.png" alt=""
+                                                        class="block">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- footer -->
+                    <footer class="relative overflow-hidden z-2 bg-bodybg">
+                        <!-- Upper Footer -->
+                        <div class="xl:pt-135 sm:pt-100 pt-60">
+                            <div class="container">
+                                <div class="grid grid-cols-12 sm:gap-10 sm:mb-100 mb-30">
+                                    <div class="md:col-span-8 col-span-12">
+                                        <h2
+                                            class="xl:text-[4.2vw]/[4.5vw] sm:text-6xl text-[40px]/50 sm:mb-55 mb-20 font-medium xl:max-w-700 text-white">
+                                            Cùng GYMFINDER chinh phục vóc dáng mơ ước. </h2>
+                                        <div class="grid grid-cols-12 gap-10">
+                                            <div class="xl:col-span-3 sm:col-span-6 col-span-12 sm:mb-0 mb-10">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Liên hệ </h4>
+                                                <ul>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="tel:+12345678910">+1 234 567 8910</a>
+                                                    </li>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="tel:+9876543210">+1 987 654 3210</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="xl:col-span-5 sm:col-span-6 col-span-12 sm:mb-0 mb-10">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Gửi tin nhắn</h4>
+                                                <ul>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="mailto:hello@example.com">hello@example.com</a>
+                                                    </li>
+                                                    <li class="pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="mailto:info@example.com">info@example.com</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md:col-span-4 col-span-12">
+                                        <div class="grid grid-cols-12">
+                                            <div class="sm:col-span-6 col-span-12 sm:mb-0 mb-10Right">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Dịch vụ</h4>
+                                                <ul>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Gói tập Hội viên</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Thực phẩm Bổ sung</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Lớp học Yoga</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="javascript:void(0);">Tư vấn PT</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="sm:col-span-6 col-span-12 sm:mb-0 mb-10Right">
+                                                <h4 class="text-white text-2xl/31 sm:mb-20 mb-5">Công ty</h4>
+                                                <ul>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="index.html">Trang chủ</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="team.html">Đội ngũ</a>
+                                                    </li>
+                                                    <li class="sm:pb-15 pb-5">
+                                                        <a class="text-white/60 text-lg/23 font-light inline-block hover:text-primary link-hover"
+                                                            href="shop-standard.html">Sản phẩm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-span-12">
+                                                <div class="sm:mt-50 mt-10Right">
+                                                    <h5 class="text-2xl sm:mb-12 text-white">Bản tin</h5>
+                                                    <div class="">
+                                                        <form class="dzSubscribe" action="assets/script/mailchamp.php"
+                                                            method="post">
+                                                            <div class="dzSubscribeMsg"></div>
+                                                            <div class="form-group">
+                                                                <div
+                                                                    class="mb-10 relative flex flex-wrap items-stretch w-full">
+                                                                    <input name="dzEmail" required="required"
+                                                                        type="email"
+                                                                        class="relative w-[1%] flex-auto py-12 pe-40 border-b-2 border-white text-white outline-none"
+                                                                        placeholder="Địa chỉ Email">
+                                                                    <button name="submit" value="Submit" type="submit"
+                                                                        class=" absolute right-0 top-0 p-8 z-9 h-full cursor-pointer">
+                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M18.8583 2.3165L15.7249 16.8748C15.6583 17.1915 15.4499 17.4582 15.1583 17.5998C14.8666 17.7415 14.5333 17.7415 14.2333 17.5998L11.8999 16.4665C11.8999 16.4665 8.91661 18.6248 8.30827 18.9082C8.19161 18.9665 8.14161 18.9582 8.05827 18.9582C7.94161 18.9582 7.81661 18.9248 7.71661 18.8582C7.54161 18.7415 7.43327 18.5498 7.43327 18.3415V13.9165C7.42494 13.8248 7.43327 13.7332 7.48327 13.6415C7.48327 13.6415 7.49161 13.6248 7.49994 13.6165C7.52494 13.5748 7.54994 13.5332 7.58327 13.4915L15.2583 5.0915L5.71661 12.9415C5.64161 13.0165 5.54161 13.0832 5.43327 13.1082C5.25827 13.1582 5.06661 13.1248 4.91661 13.0248L1.70827 11.5748C1.34994 11.3998 1.12494 11.0498 1.10827 10.6498C1.09994 10.2582 1.30827 9.8915 1.65827 9.69984L17.3249 1.17484C17.6916 0.974836 18.1249 1.00817 18.4666 1.25817C18.7999 1.50817 18.9499 1.9165 18.8666 2.3165H18.8583Z"
+                                                                                fill="#E3FF75" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="border-t border-white/30">
+                            </div>
+                        </div>
+                        <!-- Lower Footer -->
+
+                    </footer>
+                    <!-- footer END -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollProgress" title="Scroll to top"
+        class="fixed z-999 right-20 bottom-20 size-40 rounded-full dark:bg-white dark:text-black bg-bodybg text-white cursor-pointer opacity-0 pointer-events-none duration-500 flex items-center justify-center">
+        <span class="icon text-xs relative z-1"><i class="fa-solid fa-chevron-up"></i></span>
+        <svg class="absolute top-0 left-0 -rotate-90" width="40" height="40">
+            <circle class="dark:stroke-black stroke-white" cx="20" cy="20" r="17" stroke="#000" stroke-width="2"
+                fill="none" stroke-linecap="round" stroke-dasharray="100.53" stroke-dashoffset="100.53"></circle>
+        </svg>
+    </button>
+
+    <script src="assets/vendor/gsap/gsap.min.js"></script>
+    <script src="assets/vendor/gsap/MotionPathPlugin.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/vendor/gsap/ScrollSmoother.js"></script>
+    <script src="assets/vendor/SplitText/SplitText.min.js"></script>
+    <script src="assets/vendor/nouislider/nouislider.min.js"></script>
+    <!-- Checkout Modal -->
+
+    <div id="checkoutModal"
+        class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-0 transition-all duration-300 opacity-0 invisible"
+        style="transition: opacity 0.3s, visibility 0.3s;">
+        <div class="bg-white dark:bg-[#0a0a0a] w-full max-w-[800px] h-auto shadow-none transform scale-100 transition-all duration-300 border border-white/10"
+            id="modalContent">
+            <!-- Header -->
+            <div
+                class="px-12 md:px-16 pt-14 pb-8 flex justify-between items-start border-b border-gray-100 dark:border-white/5 mx-4">
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold dark:text-white text-dark mb-3 uppercase tracking-wider">
+                        Xác nhận đơn hàng</h3>
+                    <p class="text-base text-bodytext dark:text-gray-400 font-light tracking-wide">Vui lòng kiểm tra kỹ
+                        thông tin giao hàng bên dưới</p>
+                </div>
+                <button type="button" onclick="Cart.closeCheckoutModal()"
+                    class="w-14 h-14 bg-transparent hover:bg-gray-100 dark:hover:bg-white/5 flex items-center justify-center text-dark dark:text-white transition-colors duration-300">
+                    <i class="las la-times text-3xl"></i>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <form id="checkoutForm" class="px-12 md:px-16 py-12 space-y-12">
+                <!-- Personal Info -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div class="group space-y-4">
+                        <label
+                            class="block text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-400">Họ
+                            và tên *</label>
+                        <input type="text" name="name" required
+                            class="w-full bg-gray-50 dark:bg-[#151515] border border-gray-200 dark:border-white/10 px-6 py-5 text-base text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-500/50 rounded-none font-medium"
+                            placeholder="NGUYỄN VĂN A">
+                    </div>
+                    <div class="group space-y-4">
+                        <label
+                            class="block text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-400">Số
+                            điện thoại *</label>
+                        <input type="tel" name="phone" required
+                            class="w-full bg-gray-50 dark:bg-[#151515] border border-gray-200 dark:border-white/10 px-6 py-5 text-base text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-500/50 rounded-none font-medium"
+                            placeholder="0912...">
+                    </div>
+
+                    <div class="group space-y-4 md:col-span-2">
+                        <label
+                            class="block text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-400">Địa
+                            chỉ nhận hàng *</label>
+                        <input type="text" name="address" required
+                            class="w-full bg-gray-50 dark:bg-[#151515] border border-gray-200 dark:border-white/10 px-6 py-5 text-base text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-500/50 rounded-none font-medium"
+                            placeholder="Số nhà, tên đường, phường/xã, quận/huyện...">
+                    </div>
+
+                    <div class="group space-y-4 md:col-span-2">
+                        <label
+                            class="block text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-400">Ghi
+                            chú (Tùy chọn)</label>
+                        <input type="text" name="note"
+                            class="w-full bg-gray-50 dark:bg-[#151515] border border-gray-200 dark:border-white/10 px-6 py-5 text-base text-dark dark:text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-gray-500/50 rounded-none font-medium"
+                            placeholder="Lời nhắn cho shipper...">
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="space-y-5 pt-4 border-t border-gray-100 dark:border-white/5">
+                    <label
+                        class="block text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-400">Phương
+                        thức thanh toán</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label
+                            class="relative flex items-center p-6 border border-primary/50 bg-primary/5 cursor-pointer hover:bg-primary/10 transition-colors rounded-none">
+                            <input type="radio" name="paymentMethod" value="COD" checked class="hidden peer">
+                            <div
+                                class="w-5 h-5 border border-primary flex items-center justify-center mr-6 rounded-none">
+                                <div class="w-3 h-3 bg-primary rounded-none opacity-0 peer-checked:opacity-100"></div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-dark dark:text-white text-base uppercase tracking-wider">COD
+                                </h4>
+                            </div>
+                            <i class="las la-money-bill-wave text-3xl text-primary"></i>
+                        </label>
+                        <label
+                            class="relative flex items-center p-6 border border-gray-200 dark:border-white/10 bg-transparent cursor-pointer hover:bg-primary/5 transition-colors rounded-none has-[:checked]:border-primary/50 has-[:checked]:bg-primary/5">
+                            <input type="radio" name="paymentMethod" value="QR" class="hidden peer">
+                            <div
+                                class="w-5 h-5 border border-gray-400 dark:border-white/20 flex items-center justify-center mr-6 rounded-none peer-checked:border-primary">
+                                <div class="w-3 h-3 bg-primary rounded-none opacity-0 peer-checked:opacity-100"></div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-dark dark:text-white text-base uppercase tracking-wider">
+                                    VietQR</h4>
+                            </div>
+                            <i class="las la-qrcode text-3xl text-primary"></i>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Footer Action -->
+                <div class="pt-6">
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black text-dark font-bold py-6 text-lg uppercase tracking-[0.2em] shadow-none transition-all duration-300 flex items-center justify-center gap-4 group rounded-none">
+                        <span>Hoàn tất đặt hàng</span>
+                        <i
+                            class="las la-long-arrow-alt-right text-2xl group-hover:translate-x-2 transition-transform"></i>
+                    </button>
+                    <p
+                        class="text-center text-xs text-gray-400 mt-6 flex items-center justify-center gap-2 tracking-wider">
+                        <i class="las la-lock"></i> THÔNG TIN ĐƯỢC BẢO MẬT TUYỆT ĐỐI
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        #checkoutModal.open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #checkoutModal.open #modalContent {
+            transform: scale(1);
+        }
+
+        /* Custom scrollbar for textarea if needed */
+        textarea::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        textarea::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+    </style>
+
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/wnumb/wNumb.js"></script>
+    <script src="assets/vendor/wow/wow.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/dz.carousel.js"></script>
+    <script src="assets/js/dz.ajax.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+
+</html>
