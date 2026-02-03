@@ -1,5 +1,6 @@
 using GymFinder.Api.Models;
 using GymFinder.Api.Data;
+using GymFinder.Api.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,13 +13,18 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<GymFinderDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Register Services
+builder.Services.AddSingleton<IOtpService, OtpService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
 // Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000", "http://127.0.0.1:3000")
+            // Allow any origin for production (Vercel)
+            policy.AllowAnyOrigin()
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });

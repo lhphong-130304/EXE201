@@ -87,9 +87,9 @@ public class OrdersController : ControllerBase
             // VietQR Template: https://img.vietqr.io/image/<BANK_ID>-<ACCOUNT_NO>-<TEMPLATE>.png?amount=<AMOUNT>&addInfo=<DESCRIPTION>&accountName=<NAME>
             // Using dummy Info (MB Bank - 9999999999 - NGUYEN VAN A)
             string bankId = "MB";
-            string accountNo = "9999999999";
+            string accountNo = "0311045678888";
             string template = "compact2";
-            string accountName = "NGUYEN VAN A";
+            string accountName = "Phạm Gia Khải";
             string description = Uri.EscapeDataString($"Thanh toan don hang {order.Id}");
 
             qrUrl = $"https://img.vietqr.io/image/{bankId}-{accountNo}-{template}.png?amount={(int)order.TotalAmount}&addInfo={description}&accountName={Uri.EscapeDataString(accountName)}";

@@ -84,7 +84,7 @@
 
                                 <button type="submit"
                                     class="w-full btn btn-primary py-15 rounded-2xl flex items-center justify-center group mb-20">
-                                    <span class="pxl-button-text font-bold">Đăng ký ngay</span>
+                                    <span class="pxl-button-text font-bold">Tiếp tục</span>
                                     <span class="block ms-5 overflow-hidden">
                                         <svg class="group-hover:animate-toTopFromBottom" width="20" height="20"
                                             viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,15 +135,17 @@
             // Disable button and show loading
             submitBtn.disabled = true;
             const originalSubText = btnText.textContent;
-            btnText.textContent = 'Đang xử lý...';
+            btnText.textContent = 'Đang gửi mã OTP...';
 
-            const result = await Auth.register(user);
+            const result = await Auth.sendOtp(user.email);
 
             if (result.success) {
-                alert('Đăng ký thành công! Vui lòng đăng nhập.');
-                window.location.href = 'login.html';
+                // Store user data temporarily in sessionStorage (valid only for this session)
+                sessionStorage.setItem('pendingRegistration', JSON.stringify(user));
+                // Redirect to OTP verification page
+                window.location.href = 'otp-verify.html';
             } else {
-                alert(result.message || 'Đăng ký thất bại.');
+                alert(result.message || 'Không thể gửi mã OTP. Vui lòng thử lại.');
                 btnText.textContent = originalSubText;
                 submitBtn.disabled = false;
             }

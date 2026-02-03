@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:5037/api';
+const API_URL = 'http://gymfinder953.runasp.net/api'; // URL khi deploy lên MonsterASP
+// const API_URL = 'http://localhost:5037/api';
 
 const Auth = {
     async login(email, password) {
@@ -29,16 +30,15 @@ const Auth = {
         }
     },
 
-    async register(user) {
-        console.log('Attempting registration for:', user.email || user.Email);
-        console.log('User data being sent:', JSON.stringify(user));
+    async register(user, otp) {
+        console.log('Attempting registration for:', user.email);
         try {
             const response = await fetch(`${API_URL}/auth/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(user)
+                body: JSON.stringify({ user, otp })
             });
 
             const data = await response.json();
@@ -49,6 +49,82 @@ const Auth = {
             }
         } catch (error) {
             console.error('Registration error:', error);
+            return { success: false, message: 'Không thể kết nối với máy chủ.' };
+        }
+    },
+
+    async sendOtp(email) {
+        console.log('Sending OTP to:', email);
+        try {
+            const response = await fetch(`${API_URL}/otp/send`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            const data = await response.json();
+            return { success: data.success, message: data.message };
+        } catch (error) {
+            console.error('Send OTP error:', error);
+            return { success: false, message: 'Không thể kết nối với máy chủ.' };
+        }
+    },
+
+    async verifyOtp(email, otp) {
+        console.log('Verify OTP for:', email);
+        try {
+            const response = await fetch(`${API_URL}/otp/verify`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, otp })
+            });
+
+            const data = await response.json();
+            return { success: data.success, message: data.message };
+        } catch (error) {
+            console.error('Verify OTP error:', error);
+            return { success: false, message: 'Không thể kết nối với máy chủ.' };
+        }
+    },
+
+    async forgotPassword(email) {
+        console.log('Forgot password request for:', email);
+        try {
+            const response = await fetch(`${API_URL}/auth/forgot-password`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            const data = await response.json();
+            return { success: data.success, message: data.message };
+        } catch (error) {
+            console.error('Forgot password error:', error);
+            return { success: false, message: 'Không thể kết nối với máy chủ.' };
+        }
+    },
+
+    async resetPassword(email, otp, newPassword) {
+        console.log('Reset password for:', email);
+        try {
+            const response = await fetch(`${API_URL}/auth/reset-password`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, otp, newPassword })
+            });
+
+            const data = await response.json();
+            return { success: data.success, message: data.message };
+        } catch (error) {
+            console.error('Reset password error:', error);
             return { success: false, message: 'Không thể kết nối với máy chủ.' };
         }
     },
