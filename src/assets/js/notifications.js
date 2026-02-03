@@ -1,4 +1,4 @@
-const NOTIFICATIONS_API_URL = 'http://localhost:5037/api/notifications';
+const NOTIFICATIONS_API_URL = 'https://gymfinder953.runasp.net/api/notifications';
 
 class NotificationSystem {
     constructor() {

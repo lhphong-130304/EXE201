@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     // 2. Fetch dữ liệu từ API
-    const API_URL = `http://localhost:5037/api/products/${productId}`;
+    const API_URL = `https://gymfinder953.runasp.net/api/products/${productId}`;
 
     try {
         const response = await fetch(API_URL);

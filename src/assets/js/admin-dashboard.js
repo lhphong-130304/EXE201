@@ -1,4 +1,4 @@
-const ADMIN_API_URL = 'http://localhost:5037/api';
+const ADMIN_API_URL = 'https://gymfinder953.runasp.net/api';
 
 const OrderStatus = {
     Pending: 0,

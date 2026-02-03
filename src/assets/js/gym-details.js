@@ -1,5 +1,5 @@
 // gym-details.js
-const DETAIL_API_BASE_URL = 'http://localhost:5037/api';
+const DETAIL_API_BASE_URL = 'https://gymfinder953.runasp.net/api';
 
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymFinder.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99ee8923f6543566391ca5e062271ec947d5c3f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1cd2b9bdda4b49f2942dc708ca5a71fb4439406")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymFinder.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymFinder.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

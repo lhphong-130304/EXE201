@@ -1,6 +1,6 @@
 const Cart = {
     // API URL
-    apiBase: 'http://localhost:5037/api/carts',
+    apiBase: 'https://gymfinder953.runasp.net/api/carts',
 
     // Helper to get current user ID
     getUserId() {
@@ -311,7 +311,7 @@ const Cart = {
             btn.disabled = true;
             btn.innerHTML = '<i class="las la-spinner la-spin"></i> ĐANG XỬ LÝ...';
 
-            const response = await fetch("http://localhost:5037/api/orders/checkout", {
+            const response = await fetch("https://gymfinder953.runasp.net/api/orders/checkout", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

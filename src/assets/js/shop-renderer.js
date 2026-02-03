@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     /* ================= BADGE ================= */
     const badgeContainer = document.getElementById('badge-list');
-    const BADGE_API = 'http://localhost:5037/api/badge';
+    const BADGE_API = 'https://gymfinder953.runasp.net/api/badge';
 
     async function loadBadges() {
         if (!badgeContainer) return;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     /* ================= CATEGORY ================= */
     const categoryList = document.getElementById('category-list');
-    const CATEGORY_API = 'http://localhost:5037/api/category';
+    const CATEGORY_API = 'https://gymfinder953.runasp.net/api/category';
 
     async function loadCategories() {
         if (!categoryList) return;
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const productGrid = document.getElementById('product-grid');
     if (!productGrid) return;
 
-    const API_URL = 'http://localhost:5037/api/products';
+    const API_URL = 'https://gymfinder953.runasp.net/api/products';
 
     try {
         const response = await fetch(API_URL);

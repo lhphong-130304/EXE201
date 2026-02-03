@@ -1,4 +1,4 @@
-const API_URL = 'http://gymfinder953.runasp.net/api'; // URL khi deploy lên MonsterASP
+const API_URL = 'https://gymfinder953.runasp.net/api'; // URL khi deploy lên MonsterASP
 // const API_URL = 'http://localhost:5037/api';
 
 const Auth = {

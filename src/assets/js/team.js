@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5037/api';
+const API_BASE_URL = 'https://gymfinder953.runasp.net/api';
 
 const TIME_SLOTS = [
     "08:00 - 09:00", "09:00 - 10:00", "10:00 - 11:00", "11:00 - 12:00",
